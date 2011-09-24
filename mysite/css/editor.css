@@ -1,0 +1,42 @@
+.typography { /* PARAGRAPHS 
+-------------------------------------------- */ /* QUOTES
+-------------------------------------------- */ /* LINKS 
+-------------------------------------------- */ /* LIST STYLES 
+-------------------------------------------- */ /* HEADER STYLES 
+-------------------------------------------- */ /* PRE STYLES 
+-------------------------------------------- */ /* TABLE STYLING 
+-------------------------------------------- */ /* WYSIWYG EDITOR ALIGNMENT CLASSES 
+-------------------------------------------- */ /* IMAGES 
+-------------------------------------------- */ }
+.typography p { color: #666; line-height: 18px; font-size: 11px; margin: 0 0 18px 0; }
+.typography blockquote { margin: 10px; font-size: 1.4em; color: #777; font-style: italic; }
+.typography q { display: block; font-size: 0.8em; margin: 1em 1em; padding: 0.5em; border: 1px #ccc solid; }
+.typography a { text-decoration: none; color: #3E91C4; /* LINK ICONS - shows type of file
+------------------------------------ */ }
+.typography a:hover { text-decoration: underline; }
+.typography a[href$=".pdf"], .typography a[href$=".PDF"], .typography a.pdf { padding: 2px; padding-left: 20px; background: url(../images/icons/page_white_acrobat.png) no-repeat left center; }
+.typography a[href$=".doc"], .typography a[href$=".DOC"], .typography a.doc { padding: 2px; padding-left: 20px; background: url(../images/icons/page_word.png) no-repeat left center; }
+.typography a[href$=".xls"], .typography a[href$=".XLS"], .typography a.xls { padding: 2px; padding-left: 20px; background: url(../images/icons/page_excel.png) no-repeat left center; }
+.typography a[href$=".gz"], .typography a[href$=".GZ"], .typography a[href$=".gzip"], .typography a[href$=".GZIP"], .typography a[href$=".zip"], .typography a[href$=".ZIP"], .typography a.archive { padding: 2px; padding-left: 20px; background: url(../images/icons/page_white_zip.png) no-repeat left center; }
+.typography a[href$=".exe"], .typography a[href$=".EXE"], .typography a.application { padding: 2px; padding-left: 20px; background: url(../images/icons/application.png) no-repeat left center; }
+.typography ul, .typography ol { margin: 0 0 18px 24px; color: #666; }
+.typography ul li, .typography ol li { margin: 5px 10px; font-size: 11px; }
+.typography ul li li, .typography ol li li { font-size: 10px; }
+.typography h1, .typography h2 { color: #4EA3D7; margin: 0 0 18px 0; font-weight: 300; font-family: Tahoma, Verdana, sans-serif; }
+.typography h1 { font-size: 24px; }
+.typography h2 { font-size: 20px; }
+.typography h3 { color: #222; margin: 0 0 18px 0; font-weight: 300; clear: both; font-size: 18px; }
+.typography h4 { font-size: 16px; color: #222; width: 95%; font-weight: 300; line-height: 18px; border-bottom: 1px solid #ccc; margin: 0 0 16px 0; }
+.typography h5 { font-size: 14px; color: #222; font-weight: 700; margin: 0 0 12px 0; }
+.typography h6 { font-size: 13px; color: #555; line-height: 1.4em; margin: 0 0 12px 0; }
+.typography pre { font-family: "Courier New",Courier; display: block; font-size: 1.2em; margin: 2em 5em; padding: 0.5em; border: 1px #ccc solid; background: #eee; }
+.typography table { margin: 0 0 18px 0; font-size: 11px; color: #666; border-collapse: collapse; }
+.typography table td { border: 1px solid #999; padding: 5px; }
+.typography .left { text-align: left; }
+.typography .center { text-align: center; }
+.typography .right { text-align: right; }
+.typography img { border: none; }
+.typography img.right { float: right; margin-left: 20px; }
+.typography img.left { float: left; }
+.typography img.leftAlone { float: left; margin-right: 100%; }
+.typography img.center { float: none; margin-left: auto; margin-right: auto; display: block; }
