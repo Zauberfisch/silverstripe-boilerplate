@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: #333;
+ 	font-size: 62.5%;
+	font-family: Verdana, Lucida, sans-serif; 
+}
+html {
+	background: #E5DFE1;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+.clear{
+	clear:both;
+}
+
+@import "typography";
+@import "layout";
+@import "header";
+@import "navigation";
+@import "footer";
+@import "form";

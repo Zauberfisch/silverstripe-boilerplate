@@ -1,0 +1,12 @@
+[submodule "sapphire"]
+	path = sapphire
+	url = https://github.com/silverstripe/sapphire.git
+[submodule "cms"]
+	path = cms
+	url = https://github.com/silverstripe/silverstripe-cms.git
+[submodule "dataobject_manager"]
+	path = dataobject_manager
+	url = https://github.com/unclecheese/DataObjectManager.git
+[submodule "uploadify"]
+	path = uploadify
+	url = git://github.com/unclecheese/Uploadify.git
