@@ -1,4 +1,4 @@
-### how to install
+# how to install
 
     git clone https://github.com/Zauberfisch/silverstripe-boilerplate.git
     cd silverstripe-boilerplate/
@@ -23,3 +23,18 @@ the file should look like this(more infos at http://doc.silverstripe.org/sapphir
     
     global $_FILE_TO_URL_MAPPING;
     $_FILE_TO_URL_MAPPING['/var/www/'] = 'http://127.0.0.1';
+    
+# how to use
+
+This boilerplate is based on the assumption that the project will be a customized website/webapp.
+So you might notice there is no theme in the themes folder, the plan is to add all templates, javascript and css/scss into mysite.
+Which has the benefit of having the whole project at one place, not separated into 2 folders.
+
+### SASS / SCSS
+
+This boilerplate is prepared for being used with sass (http://sass-lang.com/) and compass (http://compass-style.org/)
+Once you have installed compass (see http://compass-style.org/install/) run the following command in your project root folder:
+
+    compass watch -e production .
+
+which will tell compass to watch for any file changes inside /mysite/scss
