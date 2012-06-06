@@ -30,6 +30,20 @@ This boilerplate is based on the assumption that the project will be a customize
 So you might notice there is no theme in the themes folder, the plan is to add all templates, javascript and css/scss into mysite.
 Which has the benefit of having the whole project at one place, not separated into 2 folders.
 
+### file structure
+
+    mysite
+    |-- code // your php code in here
+    |-- css // the css in here is generated from the files in /scss
+    |-- images // project images
+    |-- javascript // all your self written javascript
+    |-- scss // your scss, which gets processed and written into /css
+    |-- templates // your templates, that others put into themes/mytheme/templates
+    |-- thirdparty // all thirdparty code goes in here (jquery plugins)
+    |-- .gitignore
+    |-- _config.php
+    |-- config.rb // config file for sass
+
 ### SASS / SCSS
 
 This boilerplate is prepared for being used with sass (http://sass-lang.com/) and compass (http://compass-style.org/)
