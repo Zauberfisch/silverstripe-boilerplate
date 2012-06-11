@@ -1,0 +1,8 @@
+en:
+  mysiteSiteConfig:
+    EnableGoogleAnalytics: "enable Google Analytics?"
+    GoogleAnalyticsKey: "Google Analytics key"
+  mysiteSiteTree:
+    GoogleAnalyticsHeader: "enable Google Analytics?"
+    enableGoogleAnalyticsNo: "No"
+    enableGoogleAnalyticsYes: "Yes"

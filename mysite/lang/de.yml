@@ -1,0 +1,8 @@
+de:
+  mysiteSiteConfig:
+    EnableGoogleAnalytics: "Google Analytics verwenden?"
+    GoogleAnalyticsKey: "Google Analytics key"
+  mysiteSiteTree:
+    GoogleAnalyticsHeader: "Google Analytics verwenden?"
+    enableGoogleAnalyticsNo: "Nein"
+    enableGoogleAnalyticsYes: "Ja"

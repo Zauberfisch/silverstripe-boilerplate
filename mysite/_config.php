@@ -58,7 +58,14 @@ GD::set_default_quality(100);
     
 Director::forceWWW(); // Force redirect to www.
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls(); 
-
+    
+// ****************************************************
+// **************** Exntensions ***********************
+// ****************************************************
+    
+Object::add_extension('SiteConfig', 'mysiteSiteConfig');    
+Object::add_extension('SiteTree', 'mysiteSiteTree');    
+    
 // ****************************************************
 // **************** Path definitions ******************
 // ****************************************************
@@ -70,6 +77,7 @@ define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
 // **************** CMS *******************************
 // ****************************************************
 
+LeftAndMain::require_css('mysite/css/cms.css');
 if ($environment_type == "live") { 
 // CMSMenu::remove_menu_item('SecurityAdmin');
 // CMSMenu::remove_menu_item('CMSSettingsController');

@@ -20,5 +20,8 @@
             </div>
             <% include Footer %>
         </div>
+        
+        <% include GoogleAnalytics %>        
+        
     </body>
 </html>
