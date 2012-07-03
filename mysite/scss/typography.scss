@@ -1,0 +1,205 @@
+@import "base";
+
+.typography {
+	/* PARAGRAPHS 
+	-------------------------------------------- */
+	p { 
+	 	color: $textcolor;
+	 	line-height: 18px;
+	 	font-size: 11px;
+		margin: 0 0 18px 0;
+	}
+	
+	/* QUOTES
+	-------------------------------------------- */
+	blockquote {
+		margin: 10px;
+		font-size: 1.4em;
+		color: #777;
+		font-style: italic;
+	}	
+	q {
+		display:block;
+		font-size: 0.8em;
+		margin: 1em 1em;
+		padding: 0.5em;
+		border: 1px #ccc solid;
+	}
+	
+	/* LINKS 
+	-------------------------------------------- */
+	
+	a { 
+	 	text-decoration: none; 
+		color: #3E91C4;
+	
+		&:hover { 
+	 		text-decoration: underline;
+		}
+	
+		/* LINK ICONS - shows type of file
+		------------------------------------ */
+		&[href$=".pdf"],
+		&[href$=".PDF"],
+		&.pdf {
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_white_acrobat.png) no-repeat left center;
+		}
+		&[href$=".doc"],
+		&[href$=".DOC"],
+		&.doc {
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_word.png) no-repeat left center;
+		}
+		&[href$=".xls"],
+		&[href$=".XLS"],
+		&.xls {
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_excel.png) no-repeat left center;
+		}
+		&[href$=".gz"],
+		&[href$=".GZ"],
+		&[href$=".gzip"],
+		&[href$=".GZIP"],
+		&[href$=".zip"],
+		&[href$=".ZIP"],
+		&.archive {
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/page_white_zip.png) no-repeat left center;
+		}
+		&[href$=".exe"],
+		&[href$=".EXE"],
+		&.application {
+			padding: 2px;
+			padding-left: 20px;
+			background: url(../images/icons/application.png) no-repeat left center;
+		}
+	}
+	
+	/* LIST STYLES 
+	-------------------------------------------- */
+	ul, 
+	ol {
+		margin: 0 0 18px 24px;
+		color: $textcolor;
+		
+		li {
+			margin: 5px 10px;
+			font-size: 11px;
+		}
+			li li {
+				font-size: 10px;
+			}
+	}
+			
+	/* HEADER STYLES 
+	-------------------------------------------- */
+	
+	h1,
+	h2 { 
+		color: #4EA3D7; 
+		margin: 0 0 18px 0;
+		font-weight: 300;
+		font-family: Tahoma, Verdana, sans-serif;
+	}
+	
+	h1 {
+		font-size: 24px;
+	}
+	h2 { 
+	 	font-size: 20px; 
+	}	
+	h3 {
+		color: #222;
+		margin: 0 0 18px 0;
+		font-weight: 300;
+		clear: both;
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 16px;
+		color: #222;
+		width: 95%;
+		font-weight: 300;
+		line-height: 18px;
+		border-bottom: 1px solid #ccc;
+		margin: 0 0 16px 0;
+	}
+	h5 {
+		font-size: 14px;
+		color: #222;
+		font-weight: 700;
+		margin: 0 0 12px 0;
+	}
+	h6 {
+		font-size: 13px;
+		color: #555;
+		line-height: 1.4em;
+		margin: 0 0 12px 0;
+	}
+	
+	/* PRE STYLES 
+	-------------------------------------------- */	
+	pre {
+		font-family:"Courier New",Courier;
+		display:block;
+		font-size:1.2em;
+		margin:2em 5em;
+		padding:0.5em;
+		border:1px #ccc solid;
+		background:#eee;;
+	}
+	
+	/* TABLE STYLING 
+	-------------------------------------------- */
+	table {
+		margin: 0 0 18px 0;
+		font-size: 11px;
+		color: $textcolor;
+		border-collapse:collapse;
+		td {
+			border:1px solid #999;
+			padding:5px;
+		}
+	}	
+	
+	/* WYSIWYG EDITOR ALIGNMENT CLASSES 
+	-------------------------------------------- */
+	.left {
+		text-align: left;
+	}
+	.center {
+		text-align: center;
+	}
+	.right {
+		text-align: right;
+	}
+	
+	/* IMAGES 
+	-------------------------------------------- */
+	img {
+		border: none;
+		
+		&.right {
+			float: right;
+			margin-left: 20px;
+		}
+		&.left {
+			float: left;
+		}
+		&.leftAlone {
+			float: left;
+			margin-right: 100%;
+		}
+		&.center {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+	}
+}
