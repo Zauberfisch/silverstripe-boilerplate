@@ -67,11 +67,10 @@ Object::add_extension('SiteConfig', 'mysiteSiteConfig');
 Object::add_extension('SiteTree', 'mysiteSiteTree');    
     
 // ****************************************************
-// **************** Path definitions ******************
+// **************** Set Theme *************************
 // ****************************************************
 
-define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
-define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
+SSViewer::set_theme("boilerplate");
 
 // ****************************************************
 // **************** CMS *******************************

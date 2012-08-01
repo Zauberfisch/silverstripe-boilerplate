@@ -52,29 +52,31 @@ class Page_Controller extends ContentController {
 		
         parent::init();
         
-        Requirements::set_combined_files_folder(project() . '/_combinedfiles');
-		
+        // combine css and js files in themes/boilerplate/_combinedfiles/
+        $themeFolder = $this->ThemeDir();
+        Requirements::set_combined_files_folder($themeFolder . '/_combinedfiles');
+        
         Requirements::combine_files('main.js', array(
 			THIRDPARTY_DIR . '/jquery/jquery.min.js',
          // THIRDPARTY_DIR . '/jquery-ui/jquery-ui.min.js',
 			THIRDPARTY_DIR . '/json-js/json2.js',
 		 // THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
-			PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.pack.js',
-            PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr-2.5.3.min.js',
-		 // PROJECT_THIRDPARTY_DIR . '/bootstrap/js/bootstrap.min.js',
+			'themes/thirdparty/fancybox/jquery.fancybox-1.3.4.pack.js',
+            'themes/thirdparty/modernizr/modernizr-2.5.3.min.js',
+		 // 'themes/thirdparty/bootstrap/js/bootstrap.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/main.js',
 		));
         
         Requirements::combine_files('screen.css', array(
-            project() . '/css/h5bp.css',
-         // PROJECT_THIRDPARTY_DIR . '/bootstrap/css/bootstrap.min.css',
-         // PROJECT_THIRDPARTY_DIR . '/bootstrap/css/bootstrap-responsive.min.css',
-            project() . '/css/layout.css',
-            project() . '/css/typography.css',
-            project() . '/css/form.css',
-            project() . '/css/ie.css',
-            PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.css'
+            $themeFolder . '/css/h5bp.css',
+         // 'themes/thirdparty/bootstrap/css/bootstrap.min.css',
+         // 'themes/thirdparty/bootstrap/css/bootstrap-responsive.min.css',
+            $themeFolder . '/css/layout.css',
+            $themeFolder . '/css/typography.css',
+            $themeFolder . '/css/form.css',
+            $themeFolder . '/css/ie.css',
+            'themes/thirdparty/fancybox/jquery.fancybox-1.3.4.css'
         ));
 	}
 }
