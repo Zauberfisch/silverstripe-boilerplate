@@ -1,0 +1,6 @@
+.container {
+  width: 999px;
+  margin: 20px auto; }
+.container .layout {
+  background: #FFF;
+  padding: 20px; }

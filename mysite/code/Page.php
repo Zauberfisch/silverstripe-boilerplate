@@ -31,6 +31,17 @@ class Page_Controller extends ContentController {
 			project() . '/javascript/main.js',
 		));
 		Requirements::themedCSS('screen');
+		Requirements::combine_files('main.css', array(
+			project() . '/css/h5bp.css',
+			project() . '/css/screen.css',
+			project() . '/css/typography.css',
+			project() . '/css/form.css',
+			project() . '/css/header.css',
+			project() . '/css/navigation.css',
+			project() . '/css/footer.css',
+			project() . '/css/layout.css',
+			project() . '/css/ie.css',
+		));
 		Requirements::css(PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.css');
 	}
 }
