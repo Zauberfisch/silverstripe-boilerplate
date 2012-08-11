@@ -1,6 +1,7 @@
 # SilverStripe Boilerplate
 
 The SilverStripe Boilerplate aims to make it easier to kick of a new SilverStripe project, just download it and get started.
+
 It is just a collection of config defaults, tools and modules (sass, firePHP, _ss_environment.php, h5bp, ...) one always needs.
 
 # Maintainers
@@ -25,6 +26,7 @@ Example for the folder `/var/www/myWebsite/httpdocs`
 - `define('SS_DATABASE_CHOOSE_NAME', 1);` => will make the database "httpdocs"
 - `define('SS_DATABASE_CHOOSE_NAME', 2);` => will make the database "myWebsite"
 - `define('SS_DATABASE_CHOOSE_NAME', 3);` => will make the database "www"
+
 If you do not set `SS_DATABASE_CHOOSE_NAME` then you need to create a database manually, and set $database in /mysite/_config.php
 
 `$_FILE_TO_URL_MAPPING` is used to tell SilverStripe which folder has which URL when using the SilverStripe commandline tool "sake"
@@ -43,6 +45,8 @@ If you do not set `SS_DATABASE_CHOOSE_NAME` then you need to create a database m
     
     global $_FILE_TO_URL_MAPPING;
     $_FILE_TO_URL_MAPPING['/var/www/'] = 'http://127.0.0.1';
+
+now just run mysite.com/dev/build and you are done, no further setup required, you are ready to go
     
 # how to use
 
