@@ -11,7 +11,6 @@ It is just a collection of config defaults, tools and modules (sass, firePHP, _s
 
     git clone https://github.com/Zauberfisch/silverstripe-boilerplate.git
     cd silverstripe-boilerplate/
-    git checkout silverstripe-3
     git submodule init
     git submodule update
 
