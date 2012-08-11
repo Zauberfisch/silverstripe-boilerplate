@@ -32,7 +32,6 @@ class Page_Controller extends ContentController {
 		));
 		Requirements::themedCSS('screen');
 		Requirements::combine_files('main.css', array(
-			project() . '/css/h5bp.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
 			project() . '/css/form.css',
