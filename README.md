@@ -1,3 +1,11 @@
+# SilverStripe Boilerplate
+
+The SilverStripe Boilerplate aims to make it easier to kick of a new SilverStripe project, just download it and get started.
+It is just a collection of config defaults, tools and modules (sass, firePHP, _ss_environment.php, h5bp, ...) one always needs.
+
+# Maintainers
+- Zauberfisch <admin@zauberfisch.at> [@Zauberfisch](http://twitter.com/Zauberfisch)
+
 # how to install
 
     git clone https://github.com/Zauberfisch/silverstripe-boilerplate.git
@@ -6,16 +14,27 @@
     git submodule init
     git submodule update
 
-create a MySQL database, and change $database in /mysite/_config.php
-  
+### config with _ss_environment.php
+
 create a file named `_ss_environment.php`, you can place that inside the repo, parent folder or in the parent parent folder.  
 the file should look like this(more infos at http://doc.silverstripe.org/sapphire/en/topics/environment-management)
+
+if you set `SS_DATABASE_CHOOSE_NAME` in `_ss_environment.php`, SilverStripe will even choose the database name for you based on the folder name your project is in
+You can also set it to use the parent folder or the parent parent folder name for the database name
+Example for the folder `/var/www/myWebsite/httpdocs`
+- `define('SS_DATABASE_CHOOSE_NAME', 1);` => will make the database "httpdocs"
+- `define('SS_DATABASE_CHOOSE_NAME', 2);` => will make the database "myWebsite"
+- `define('SS_DATABASE_CHOOSE_NAME', 3);` => will make the database "www"
+If you do not set `SS_DATABASE_CHOOSE_NAME` then you need to create a database manually, and set $database in /mysite/_config.php
+
+`$_FILE_TO_URL_MAPPING` is used to tell SilverStripe which folder has which URL when using the SilverStripe commandline tool "sake"
     
     <?php
     
     define('SS_DATABASE_SERVER', 'localhost');
     define('SS_DATABASE_USERNAME', 'YOUR_DATABASE_USERNAME');
     define('SS_DATABASE_PASSWORD', 'YOUR_DATABASE_PASSWORD');
+    define('SS_DATABASE_CHOOSE_NAME', 2);
     
     define('SS_ENVIRONMENT_TYPE', 'dev');
     

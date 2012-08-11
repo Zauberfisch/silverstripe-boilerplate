@@ -5,6 +5,9 @@ $project = 'mysite';
 // ****************************************************
 // **************** database & general settings *******
 // ****************************************************
+// you can define the database here with $database or let SilverStripe choose it, check the README for more infos
+//global $database;
+//$database = 'silverstripe3-boilerplate';
 MySQLDatabase::set_connection_charset('utf8');
 // use the _ss_environment.php file for configuration
 require_once ('conf/ConfigureFromEnv.php');
