@@ -23,10 +23,9 @@ class Page_Controller extends ContentController {
 		Requirements::combine_files('main.js', array(
 			THIRDPARTY_DIR . '/jquery/jquery.min.js',
 			// THIRDPARTY_DIR . '/jquery-ui/jquery-ui.min.js',
-			THIRDPARTY_DIR . '/json-js/json2.js',
 			THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
 			PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.pack.js',
-			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr-2.5.3.min.js',
+			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/main.js',
 		));
