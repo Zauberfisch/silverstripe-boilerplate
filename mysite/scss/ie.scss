@@ -1,17 +1,17 @@
 @import "config";
 
 .gt-ie8 * {
-  // dissable filter on all elements in IE9 and above,
-  // to avoid double gradients when using the rgba-background and simple-gradient mixins
-  filter: none !important;
+	// dissable filter on all elements in IE9 and above,
+	// to avoid double gradients when using the rgba-background and simple-gradient mixins
+	filter: none !important;
 }
 
 .lt-ie9 {
-  // IE 8 and lower
-  .lt-ie8 {
-    // IE 7 and lower
-    .lt-ie7 {
-      // IE 6 and lower
-    }
-  }
+	// IE 8 and lower
+	.lt-ie8 {
+		// IE 7 and lower
+		.lt-ie7 {
+			// IE 6 and lower
+		}
+	}
 }

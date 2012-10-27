@@ -4,9 +4,9 @@
 	// * PARAGRAPHS
 	// -------------------------------------------- */
 	p {
-	 	color: #666;
-	 	line-height: 18px;
-	 	font-size: 11px;
+		color: #666;
+		line-height: 18px;
+		font-size: 11px;
 		margin: 0 0 18px 0;
 	}
 
@@ -19,7 +19,7 @@
 		font-style: italic;
 	}
 	q {
-		display:block;
+		display: block;
 		font-size: 0.8em;
 		margin: 1em 1em;
 		padding: 0.5em;
@@ -30,11 +30,11 @@
 	// -------------------------------------------- */
 
 	a {
-	 	text-decoration: none;
+		text-decoration: none;
 		color: #3E91C4;
 
 		&:hover {
-	 		text-decoration: underline;
+			text-decoration: underline;
 		}
 
 		// * LINK ICONS - shows type of file
@@ -91,9 +91,9 @@
 			margin: 5px 10px;
 			font-size: 11px;
 		}
-			li li {
-				font-size: 10px;
-			}
+		li li {
+			font-size: 10px;
+		}
 	}
 
 	// * HEADER STYLES
@@ -110,7 +110,7 @@
 		font-size: 24px;
 	}
 	h2 {
-	 	font-size: 20px;
+		font-size: 20px;
 	}
 	h3 {
 		color: #222;
@@ -144,13 +144,13 @@
 	// * PRE STYLES
 	// -------------------------------------------- */
 	pre {
-		font-family:"Courier New",Courier;
-		display:block;
-		font-size:1.2em;
-		margin:2em 5em;
-		padding:0.5em;
-		border:1px #ccc solid;
-		background:#eee;;
+		font-family: "Courier New", Courier;
+		display: block;
+		font-size: 1.2em;
+		margin: 2em 5em;
+		padding: 0.5em;
+		border: 1px #ccc solid;
+		background: #eee;;
 	}
 
 	// * TABLE STYLING
@@ -159,10 +159,10 @@
 		margin: 0 0 18px 0;
 		font-size: 11px;
 		color: #666;
-		border-collapse:collapse;
+		border-collapse: collapse;
 		td {
-			border:1px solid #999;
-			padding:5px;
+			border: 1px solid #999;
+			padding: 5px;
 		}
 	}
 
@@ -189,16 +189,16 @@
 		}
 		&.left {
 			float: left;
-            margin-right: 20px;
+			margin-right: 20px;
 		}
-        &.leftAlone {
-          float: left;
-          margin-right: 100%;
-        }
-        &.rightAlone {
-          float: right;
-          margin-left: 100%;
-        }
+		&.leftAlone {
+			float: left;
+			margin-right: 100%;
+		}
+		&.rightAlone {
+			float: right;
+			margin-left: 100%;
+		}
 		&.center {
 			float: none;
 			margin-left: auto;
