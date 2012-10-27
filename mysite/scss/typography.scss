@@ -44,21 +44,21 @@
 		&.pdf {
 			padding: 2px;
 			padding-left: 20px;
-			background: url(../images/icons/page_white_acrobat.png) no-repeat left center;
+			background: image-url("icons/page_white_acrobat.png") no-repeat left center;
 		}
 		&[href$=".doc"],
 		&[href$=".DOC"],
 		&.doc {
 			padding: 2px;
 			padding-left: 20px;
-			background: url(../images/icons/page_word.png) no-repeat left center;
+			background: image-url("icons/page_word.png") no-repeat left center;
 		}
 		&[href$=".xls"],
 		&[href$=".XLS"],
 		&.xls {
 			padding: 2px;
 			padding-left: 20px;
-			background: url(../images/icons/page_excel.png) no-repeat left center;
+			background: image-url("icons/page_excel.png") no-repeat left center;
 		}
 		&[href$=".gz"],
 		&[href$=".GZ"],
@@ -69,14 +69,14 @@
 		&.archive {
 			padding: 2px;
 			padding-left: 20px;
-			background: url(../images/icons/page_white_zip.png) no-repeat left center;
+			background: image-url("icons/page_white_zip.png") no-repeat left center;
 		}
 		&[href$=".exe"],
 		&[href$=".EXE"],
 		&.application {
 			padding: 2px;
 			padding-left: 20px;
-			background: url(../images/icons/application.png) no-repeat left center;
+			background: image-url("icons/application.png") no-repeat left center;
 		}
 	}
 
@@ -104,7 +104,6 @@
 		color: #4EA3D7;
 		margin: 0 0 18px 0;
 		font-weight: 300;
-		font-family: Tahoma, Verdana, sans-serif;
 	}
 
 	h1 {
@@ -190,11 +189,16 @@
 		}
 		&.left {
 			float: left;
+            margin-right: 20px;
 		}
-		&.leftAlone {
-			float: left;
-			margin-right: 100%;
-		}
+        &.leftAlone {
+          float: left;
+          margin-right: 100%;
+        }
+        &.rightAlone {
+          float: right;
+          margin-left: 100%;
+        }
 		&.center {
 			float: none;
 			margin-left: auto;
