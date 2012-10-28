@@ -29,7 +29,6 @@ class Page_Controller extends ContentController {
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/main.js',
 		));
-		Requirements::themedCSS('screen');
 		Requirements::combine_files('main.css', array(
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
