@@ -25,9 +25,13 @@ class Page_Controller extends ContentController {
 			// THIRDPARTY_DIR . '/jquery-ui/jquery-ui.min.js',
 			THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
 			PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.pack.js',
-			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/main.js',
+		));
+		// we need to insert modernizr into <head> for html5shiv to work
+		Requirements::insertHeadTags(sprintf(
+			'<script type="text/javascript" src="%s"></script>',
+			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
 		));
 		Requirements::combine_files('main.css', array(
 			project() . '/css/screen.css',
