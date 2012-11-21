@@ -5,6 +5,8 @@
 * {
 	margin: 0;
 	padding: 0;
+	@include box-sizing(border-box);
+	*behavior: url(/mysite/polyfill/box-sizing/boxsizing.htc);
 }
 
 ::-moz-selection {
