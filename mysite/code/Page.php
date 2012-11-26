@@ -41,7 +41,7 @@ class Page_Controller extends ContentController {
 			project() . '/css/navigation.css',
 			project() . '/css/footer.css',
 			project() . '/css/layout.css',
-			project() . '/css/ie.css',
+			project() . '/css/legacy.css',
 		));
 		Requirements::css(PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.css');
 	}
