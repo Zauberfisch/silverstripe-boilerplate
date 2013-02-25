@@ -9,6 +9,7 @@ class Page extends SiteTree {
 	public static $belongs_many_many = array();
 	public static $searchable_fields = array();
 	public static $summary_fields = array();
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		return $fields;
@@ -17,6 +18,7 @@ class Page extends SiteTree {
 
 class Page_Controller extends ContentController {
 	public static $allowed_actions = array();
+
 	public function init() {
 		parent::init();
 		Requirements::set_combined_files_folder(project() . '/_combinedfiles');
