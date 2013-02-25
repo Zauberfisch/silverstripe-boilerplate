@@ -70,8 +70,7 @@ Email::setAdminEmail('myEmail@mysite.com');
 // ****************************************************
 // **************** extensions ************************
 // ****************************************************
-//Object::add_extension('SiteConfig', 'mysiteSiteConfig');
-//Object::add_extension('SiteTree', 'mysiteSiteTree');
+//SiteConfig::add_extension('mysiteSiteConfig');
 
 // ****************************************************
 // **************** CMS *******************************
