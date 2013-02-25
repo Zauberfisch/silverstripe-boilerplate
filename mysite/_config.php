@@ -76,7 +76,7 @@ Email::setAdminEmail('myEmail@mysite.com');
 // ****************************************************
 // **************** CMS *******************************
 // ****************************************************
-LeftAndMain::require_css('mysite/css/cms.css');
+//LeftAndMain::require_css('mysite/css/cms.css');
 // CMSMenu::remove_menu_item('SecurityAdmin');
 // CMSMenu::remove_menu_item('CMSSettingsController');
 // CMSMenu::remove_menu_item('Help'); // still not possible ?
