@@ -36,11 +36,12 @@ class Page_Controller extends ContentController {
 			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
 		));
 		Requirements::combine_files('main.css', array(
+			PROJECT_THIRDPARTY_DIR . '/css/normalize.css',
+			PROJECT_THIRDPARTY_DIR . '/css/h5bp.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
 			project() . '/css/form.css',
 			project() . '/css/header.css',
-			project() . '/css/navigation.css',
 			project() . '/css/footer.css',
 			project() . '/css/layout.css',
 			project() . '/css/legacy.css',

@@ -13,7 +13,7 @@
   font-size: 0.8em;
   margin: 1em 1em;
   padding: 0.5em;
-  border: 1px #ccc solid; }
+  border: 1px #cccccc solid; }
 .typography a {
   text-decoration: none;
   color: #3E91C4; }
@@ -22,23 +22,23 @@
 .typography a[href$=".pdf"], .typography a[href$=".PDF"], .typography a.pdf {
   padding: 2px;
   padding-left: 20px;
-  background: url(../images/icons/page_white_acrobat.png) no-repeat left center; }
+  background: url('../images/icons/page_white_acrobat.png?1360162590') no-repeat left center; }
 .typography a[href$=".doc"], .typography a[href$=".DOC"], .typography a.doc {
   padding: 2px;
   padding-left: 20px;
-  background: url(../images/icons/page_word.png) no-repeat left center; }
+  background: url('../images/icons/page_word.png?1360162590') no-repeat left center; }
 .typography a[href$=".xls"], .typography a[href$=".XLS"], .typography a.xls {
   padding: 2px;
   padding-left: 20px;
-  background: url(../images/icons/page_excel.png) no-repeat left center; }
+  background: url('../images/icons/page_excel.png?1360162590') no-repeat left center; }
 .typography a[href$=".gz"], .typography a[href$=".GZ"], .typography a[href$=".gzip"], .typography a[href$=".GZIP"], .typography a[href$=".zip"], .typography a[href$=".ZIP"], .typography a.archive {
   padding: 2px;
   padding-left: 20px;
-  background: url(../images/icons/page_white_zip.png) no-repeat left center; }
+  background: url('../images/icons/page_white_zip.png?1360162590') no-repeat left center; }
 .typography a[href$=".exe"], .typography a[href$=".EXE"], .typography a.application {
   padding: 2px;
   padding-left: 20px;
-  background: url(../images/icons/application.png) no-repeat left center; }
+  background: url('../images/icons/application.png?1360162590') no-repeat left center; }
 .typography ul, .typography ol {
   margin: 0 0 18px 24px;
   color: #666; }
@@ -50,8 +50,7 @@
 .typography h1, .typography h2 {
   color: #4EA3D7;
   margin: 0 0 18px 0;
-  font-weight: 300;
-  font-family: Tahoma, Verdana, sans-serif; }
+  font-weight: 300; }
 .typography h1 {
   font-size: 24px; }
 .typography h2 {
@@ -68,7 +67,7 @@
   width: 95%;
   font-weight: 300;
   line-height: 18px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
   margin: 0 0 16px 0; }
 .typography h5 {
   font-size: 14px;
@@ -81,12 +80,12 @@
   line-height: 1.4em;
   margin: 0 0 12px 0; }
 .typography pre {
-  font-family: "Courier New",Courier;
+  font-family: "Courier New", Courier;
   display: block;
   font-size: 1.2em;
   margin: 2em 5em;
   padding: 0.5em;
-  border: 1px #ccc solid;
+  border: 1px #cccccc solid;
   background: #eee; }
 .typography table {
   margin: 0 0 18px 0;
@@ -94,7 +93,7 @@
   color: #666;
   border-collapse: collapse; }
 .typography table td {
-  border: 1px solid #999;
+  border: 1px solid #999999;
   padding: 5px; }
 .typography .left {
   text-align: left; }
@@ -108,10 +107,14 @@
   float: right;
   margin-left: 20px; }
 .typography img.left {
-  float: left; }
+  float: left;
+  margin-right: 20px; }
 .typography img.leftAlone {
   float: left;
   margin-right: 100%; }
+.typography img.rightAlone {
+  float: right;
+  margin-left: 100%; }
 .typography img.center {
   float: none;
   margin-left: auto;

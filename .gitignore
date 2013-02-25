@@ -2,3 +2,4 @@ silverstripe-cache
 assets
 .project
 .idea
+*.iml

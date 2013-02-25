@@ -4,7 +4,7 @@
 
 // easily create a linear gradient without worrying about different prefixes of IE fallback
 // NOTE: the IE fallback also applies to modern IE, so make sure you set "filter: none !important;" on IE > 8
-@mixin simple-gradient($start-color, $end-color, $orientation: vertical, $svg-fallback: true){
+@mixin simple-gradient($start-color, $end-color, $orientation: vertical, $svg-fallback: true) {
 	background-color: $start-color;
 	@include filter-gradient($start-color, $end-color, $orientation);
 	$orientation: if($orientation == vertical, top, left);
@@ -14,14 +14,14 @@
 }
 
 // creates an RGBa background, and uses filter as fall back for old IE
-@mixin rgba-background($color, $opacity){
+@mixin rgba-background($color, $opacity) {
 	$rgba: rgba($color, $opacity);
 	$IEcolor: ie_hex_str($rgba);
 	@include filter-gradient($rgba, $rgba, "vertical");
 	background: $rgba;
 }
 
-@mixin easy-font-face($name, $font-file, $bold: false, $italic: false){
+@mixin easy-font-face($name, $font-file, $bold: false, $italic: false) {
 	$eot: "#{$font-file}.eot";
 	$iefont: unquote("#{$eot}?iefix");
 	$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
@@ -32,10 +32,10 @@
 	}
 
 	@if $bold {
-	$font-file: "#{$font-file}-bold";
-	$eot: "#{$font-file}.eot";
-	$iefont: unquote("#{$eot}?iefix");
-	$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
+		$font-file: "#{$font-file}-bold";
+		$eot: "#{$font-file}.eot";
+		$iefont: unquote("#{$eot}?iefix");
+		$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
 		@font-face {
 			font-family: quote("#{$name}-bold");
 			font-weight: bold;
