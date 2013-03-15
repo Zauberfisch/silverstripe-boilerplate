@@ -1,0 +1,88 @@
+@import "compass";
+
+// easily create a linear gradient without worrying about different prefixes of IE fallback
+// NOTE: the IE fallback also applies to modern IE, so make sure you set "filter: none !important;" on IE > 8
+// usage example: @include simple-gradient(#000, #FFF); // normal gradient
+// usage example: @include simple-gradient(#000, #FFF, horizontal); // horizontal gradient
+// usage example: @include simple-gradient(#000, #FFF, vertical, false); // no SVG fallback for IE9
+@mixin simple-gradient($start-color, $end-color, $orientation: vertical, $svg-fallback: true) {
+	background-color: $start-color;
+	@include filter-gradient($start-color, $end-color, $orientation);
+	$orientation: if($orientation == vertical, top, left);
+	$experimental-support-for-svg: $svg-fallback;
+	@include background-image(linear-gradient(top, $start-color 0%, $end-color 100%));
+	@include background-clip(padding-box);
+}
+
+// creates an RGBa background, and uses filter as fall back for old IE
+// usage example: @include rgba-background(#000, 0.5);
+@mixin rgba-background($color, $opacity) {
+	$rgba: rgba($color, $opacity);
+	$IEcolor: ie_hex_str($rgba);
+	@include filter-gradient($rgba, $rgba, "vertical");
+	background: $rgba;
+}
+
+// make it easy to include a font via font-face
+// usage example:
+//    // requires this files to exist:
+//    // fonts/folder/myFontFile.ttf
+//    // fonts/folder/myFontFile.eot
+//    // fonts/folder/myFontFile.woff
+//    // fonts/folder/myFontFile.otf
+//    // fonts/folder/myFontFile.svg
+//    @include easey-font-face('myFontName', 'folder/myFontFile');
+// usage example:
+//    // requires this files to exist:
+//    // fonts/folder/myFontFile.ttf
+//    // fonts/folder/myFontFile.eot
+//    // fonts/folder/myFontFile.woff
+//    // fonts/folder/myFontFile.otf
+//    // fonts/folder/myFontFile.svg
+//    // fonts/folder/myFontFile-bold.ttf
+//    // fonts/folder/myFontFile-bold.eot
+//    // fonts/folder/myFontFile-bold.woff
+//    // fonts/folder/myFontFile-bold.otf
+//    // fonts/folder/myFontFile-bold.svg
+//    // fonts/folder/myFontFile-italic.ttf
+//    // fonts/folder/myFontFile-italic.eot
+//    // fonts/folder/myFontFile-italic.woff
+//    // fonts/folder/myFontFile-italic.otf
+//    // fonts/folder/myFontFile-italic.svg
+//    @include easey-font-face('myFontName', 'folder/myFontFile', true, true);
+@mixin easy-font-face($name, $font-file, $bold: false, $italic: false) {
+	$eot: "#{$font-file}.eot";
+	$iefont: unquote("#{$eot}?iefix");
+	$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
+	@font-face {
+		font-family: quote($name);
+		src: font-url($eot);
+		src: $font-files;
+	}
+
+	@if $bold {
+		$font-file: "#{$font-file}-bold";
+		$eot: "#{$font-file}.eot";
+		$iefont: unquote("#{$eot}?iefix");
+		$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
+		@font-face {
+			font-family: quote("#{$name}-bold");
+			font-weight: bold;
+			src: font-url($eot);
+			src: $font-files;
+		}
+	}
+
+	@if $italic {
+		$font-file: "#{$font-file}-italic";
+		$eot: "#{$font-file}.eot";
+		$iefont: unquote("#{$eot}?iefix");
+		$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
+		@font-face {
+			font-family: quote("#{$name}-italic");
+			font-style: italic;
+			src: font-url($eot);
+			src: $font-files;
+		}
+	}
+}
