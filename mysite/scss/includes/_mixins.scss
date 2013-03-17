@@ -33,7 +33,6 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image-url($image, true)', sizingMethod='scale')";
 }
 
-
 // make it easy to include a font via font-face
 // @example:
 //    // requires this files to exist:
@@ -42,7 +41,7 @@
 //    // fonts/folder/myFontFile.woff
 //    // fonts/folder/myFontFile.otf
 //    // fonts/folder/myFontFile.svg
-//    @include easey-font-face('myFontName', 'folder/myFontFile');
+//    @include custom-font('myFontName', 'folder/myFontFile');
 // @example:
 //    // requires this files to exist:
 //    // fonts/folder/myFontFile.ttf
@@ -50,50 +49,36 @@
 //    // fonts/folder/myFontFile.woff
 //    // fonts/folder/myFontFile.otf
 //    // fonts/folder/myFontFile.svg
+//    // fonts/folder/myFontFile-light.ttf
+//    // fonts/folder/myFontFile-light.eot
+//    // fonts/folder/myFontFile-light.woff
+//    // fonts/folder/myFontFile-light.otf
+//    // fonts/folder/myFontFile-light.svg
 //    // fonts/folder/myFontFile-bold.ttf
 //    // fonts/folder/myFontFile-bold.eot
 //    // fonts/folder/myFontFile-bold.woff
 //    // fonts/folder/myFontFile-bold.otf
 //    // fonts/folder/myFontFile-bold.svg
-//    // fonts/folder/myFontFile-italic.ttf
-//    // fonts/folder/myFontFile-italic.eot
-//    // fonts/folder/myFontFile-italic.woff
-//    // fonts/folder/myFontFile-italic.otf
-//    // fonts/folder/myFontFile-italic.svg
-//    @include easey-font-face('myFontName', 'folder/myFontFile', true, true);
-@mixin easy-font-face($name, $font-file, $bold: false, $italic: false) {
-	$eot: "#{$font-file}.eot";
-	$iefont: unquote("#{$eot}?iefix");
-	$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
-	@font-face {
-		font-family: quote($name);
-		src: font-url($eot);
-		src: $font-files;
+//    @include custom-font('myFontName', 'folder/myFontFile', ('', 'light', 'bold'));
+@mixin custom-font($name, $fileName: false, $weightList: false) {
+	@if ($fileName == false) {
+		$fileName: $name;
 	}
-
-	@if $bold {
-		$font-file: "#{$font-file}-bold";
-		$eot: "#{$font-file}.eot";
-		$iefont: unquote("#{$eot}?iefix");
-		$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
-		@font-face {
-			font-family: quote("#{$name}-bold");
-			font-weight: bold;
-			src: font-url($eot);
-			src: $font-files;
-		}
+	@if ($weightList == false) {
+		$weightList: '';
 	}
-
-	@if $italic {
-		$font-file: "#{$font-file}-italic";
-		$eot: "#{$font-file}.eot";
-		$iefont: unquote("#{$eot}?iefix");
-		$font-files: font-url($iefont) unquote("format('eot')"), font-files("#{$font-file}.ttf", truetype, "#{$font-file}.woff", woff, "#{$font-file}.otf", opentype, "#{$font-file}.svg", svg);
+	@each $weight in $weightList {
 		@font-face {
-			font-family: quote("#{$name}-italic");
-			font-style: italic;
+			$file: $fileName;
+			@if $weight != '' {
+				$file: "#{$fileName}-#{$weight}";
+				font-weight: unquote($weight);
+			}
+			$eot: "#{$file}.eot";
+			$ie: unquote("#{$eot}?iefix");
+			font-family: quote($name);
 			src: font-url($eot);
-			src: $font-files;
+			src: font-url($ie) unquote("format('eot')"), font-files("#{$file}.ttf", truetype, "#{$file}.woff", woff, "#{$file}.otf", opentype, "#{$file}.svg", svg);
 		}
 	}
 }
