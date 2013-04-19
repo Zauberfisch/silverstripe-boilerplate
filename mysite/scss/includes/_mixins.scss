@@ -19,7 +19,7 @@
 @mixin rgba-background($color, $opacity) {
 	$rgba: rgba($color, $opacity);
 	$IEcolor: ie_hex_str($rgba);
-	@include filter-gradient($rgba, $rgba, "vertical");
+	@include filter-gradient($IEcolor, $IEcolor, "vertical");
 	background: $rgba;
 }
 
