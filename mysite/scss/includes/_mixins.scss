@@ -18,8 +18,7 @@
 // @example: @include rgba-background(#000, 0.5);
 @mixin rgba-background($color, $opacity) {
 	$rgba: rgba($color, $opacity);
-	$IEcolor: ie_hex_str($rgba);
-	@include filter-gradient($IEcolor, $IEcolor, "vertical");
+	@include filter-gradient($rgba, $rgba, "vertical");
 	background: $rgba;
 }
 
