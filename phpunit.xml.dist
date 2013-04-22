@@ -1,7 +1,7 @@
 <!-- 
 	PHPUnit configuration for SilverStripe
 
-	Requires PHPUnit 3.6+
+	Requires PHPUnit 3.5+
 
 	Usage: 
 	 - "phpunit": Runs all tests in all folders
@@ -10,31 +10,22 @@
 	 - "phpunit framework/tests/filesystem/FolderTest.php": Run a single test
 	 - "phpunit <dash><dash>coverage-html assets/": Generate coverage report (replace <dash> with "-", requires xdebug)
 	
-	Further information:
-	- http://www.phpunit.de/manual/current/en/textui.html for more commandline options.
-	- http://github.com/chillu/silverstripe-doc-restructuring/blob/master/master/cms/docs/en/howto/phpunit-configuration.md
-	  for more information on configuration and execution options.
-	- framework/dev/TestRunner.php for an alternative way to run unit tests through the "sake" CLI tool.
+	More information:
+	- http://www.phpunit.de/manual/current/en/textui.html
+	- http://doc.silverstripe.org/framework/en/topics/testing/#configuration
 -->
 <phpunit bootstrap="framework/tests/bootstrap.php" colors="true">
+
 	<testsuite name="Default">
-		<directory>./</directory>
-		<exclude>framework/thirdparty/</exclude>
+		<directory>mysite/tests</directory>
+		<directory>cms/tests</directory>
+		<directory>framework/tests</directory>
 	</testsuite>
-
-	<filter>
-		<blacklist>
-			<directory suffix=".php">framework/dev/</directory>
-			<directory suffix=".php">framework/thirdparty/</directory>
-			<directory suffix=".php">cms/thirdparty/</directory>
-			<file>framework/tests/PhpSyntaxTest.php</file>
-		</blacklist>
-	</filter>
-
+	
 	<listeners>
 		<listener class="SS_TestListener" file="framework/dev/TestListener.php" />
 	</listeners>
-
+	
 	<groups>
 		<exclude>
 			<group>sanitychecks</group>

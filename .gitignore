@@ -1,5 +1,12 @@
+assets/*
+_ss_environment.php
+tools/phing-metadata
 silverstripe-cache
-assets
+.buildpath
 .project
+.settings
 .idea
+.DS_Store
+vendor/
+composer.lock
 *.iml

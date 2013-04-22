@@ -1,6 +1,0 @@
-[submodule "cms"]
-	path = cms
-	url = https://github.com/silverstripe/silverstripe-cms.git
-[submodule "framework"]
-	path = framework
-	url = https://github.com/silverstripe/sapphire.git

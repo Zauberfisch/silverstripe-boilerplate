@@ -1,0 +1,21 @@
+{
+	"name": "silverstripe/installer",
+	"description": "The SilverStripe Framework Installer",
+	"require": {
+		"php": ">=5.3.2",
+		"silverstripe/cms": "dev-master",
+		"silverstripe/framework": "dev-master",
+		"silverstripe-themes/simple": "*"
+	},
+	"require-dev": {
+		"silverstripe/docsviewer": "*",
+		"silverstripe/buildtools": "*",
+		"phpunit/phpunit": "3.7.*"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "3.2.x-dev"
+	}
+	},
+	"minimum-stability": "dev"
+}
