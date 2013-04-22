@@ -10,3 +10,8 @@ silverstripe-cache
 vendor/
 composer.lock
 *.iml
+framework
+cms
+buildtools
+docsviewer
+reports
