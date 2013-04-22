@@ -2,17 +2,18 @@
 
 The SilverStripe Boilerplate aims to make it easier to kick of a new SilverStripe project, just download it and get started.
 
-It is just a collection of config defaults, tools and modules (sass, firePHP, _ss_environment.php, h5bp, ...) one always needs.
+It is just a collection of config defaults, tools and modules (sass, _ss_environment.php, h5bp, ...) one always needs.    
+
+As of SilverStripe 3.1 this boilerplate requieres [composer](http://getcomposer.org/).
 
 # Maintainers
 - Zauberfisch <admin@zauberfisch.at> [@Zauberfisch](http://twitter.com/Zauberfisch)
 
 # how to install
 
-    git clone https://github.com/Zauberfisch/silverstripe-boilerplate.git
-    cd silverstripe-boilerplate/
-    git submodule init
-    git submodule update
+    git clone https://github.com/Zauberfisch/silverstripe-boilerplate.git "myNewProject"
+    cd myNewProject/
+    composer update
 
 ### config with _ss_environment.php
 
