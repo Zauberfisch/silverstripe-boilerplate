@@ -4,8 +4,7 @@
 	"require": {
 		"php": ">=5.3.2",
 		"silverstripe/cms": "dev-master",
-		"silverstripe/framework": "dev-master",
-		"silverstripe-themes/simple": "*"
+		"silverstripe/framework": "dev-master"
 	},
 	"require-dev": {
 		"silverstripe/docsviewer": "*",
