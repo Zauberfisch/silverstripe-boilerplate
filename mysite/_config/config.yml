@@ -1,0 +1,27 @@
+---
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+Name: mysite
+After: 'framework/*','cms/*'
+---
+SSViewer:
+  # display template filenames as comments in the html output
+  source_file_comments: true
+  # Set a theme
+  # theme: 'simple'
+MySQLDatabase:
+  connection_charset: 'utf8'
+GDBackend:
+  default_quality: 100
+SiteTree:
+  nested_urls: true
+  # Disable creating of default pages (like home) on /dev/build
+  # create_default_pages: false
+Email:
+  admin_email: 'myEmail@mysite.com'
+#SiteConfig:
+#  Extensions:
+#    - 'mysiteSiteConfig'
+#LeftAndMain:
+#  extra_requirements_css:
+#    - 'mysite/css/cms.css'

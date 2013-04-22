@@ -1,14 +1,14 @@
 <?php
 
 class Page extends SiteTree {
-	public static $db = array();
-	public static $has_one = array();
-	public static $has_many = array();
-	public static $many_many = array();
-	public static $defaults = array();
-	public static $belongs_many_many = array();
-	public static $searchable_fields = array();
-	public static $summary_fields = array();
+	private static $db = array();
+	private static $has_one = array();
+	private static $has_many = array();
+	private static $many_many = array();
+	private static $defaults = array();
+	private static $belongs_many_many = array();
+	private static $searchable_fields = array();
+	private static $summary_fields = array();
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -17,7 +17,7 @@ class Page extends SiteTree {
 }
 
 class Page_Controller extends ContentController {
-	public static $allowed_actions = array();
+	private static $allowed_actions = array();
 
 	public function init() {
 		parent::init();
