@@ -15,16 +15,19 @@ As of SilverStripe 3.1 this boilerplate requieres [composer](http://getcomposer.
     cd myNewProject/
     composer update
 
-### config with _ss_environment.php
+# configuration (with _ss_environment.php)
 
 create a file named `_ss_environment.php`, you can place that inside the repo, parent folder or in the parent parent folder.  
 the file should look like this (more infos at http://doc.silverstripe.org/sapphire/en/topics/environment-management)
+
+**this method is recommended for database and environment configuration, because you can easily exclude it from version control**
     
     <?php
     
     define('SS_DATABASE_SERVER', 'localhost');
     define('SS_DATABASE_USERNAME', 'YOUR_DATABASE_USERNAME');
     define('SS_DATABASE_PASSWORD', 'YOUR_DATABASE_PASSWORD');
+    // define('SS_DATABASE_NAME', 'YOUR_DATABASE_NAME');
     define('SS_DATABASE_CHOOSE_NAME', 2);
     
     define('SS_ENVIRONMENT_TYPE', 'dev');
@@ -34,15 +37,15 @@ the file should look like this (more infos at http://doc.silverstripe.org/sapphi
     
     global $_FILE_TO_URL_MAPPING;
     $_FILE_TO_URL_MAPPING['/var/www/'] = 'http://127.0.0.1';
+    
+there are 2 ways of setting a database name:    
 
-if you set `SS_DATABASE_CHOOSE_NAME` in `_ss_environment.php`, SilverStripe will even choose the database name for you based on the folder name your project is in
-You can also set it to use the parent folder or the parent parent folder name for the database name
-Example for the folder `/var/www/myWebsite/httpdocs`
-- `define('SS_DATABASE_CHOOSE_NAME', 1);` => will make the database "httpdocs"
-- `define('SS_DATABASE_CHOOSE_NAME', 2);` => will make the database "myWebsite"
-- `define('SS_DATABASE_CHOOSE_NAME', 3);` => will make the database "www"
-
-If you do not set `SS_DATABASE_CHOOSE_NAME` then you need to create a database manually, and set $database in /mysite/_config.php
+- you can set the database name via `SS_DATABASE_NAME` ( **recommended for live environement** )
+- or you can let SilverStripe automaticly select a database name for you, using `SS_DATABASE_CHOOSE_NAME` SilverStripe will call the database after the project folder name (You can also set it to use the parent folder or the parent parent folder name for the database name) (if silverstripe has permissions on the database server, it will even create them for you)
+    Example for the folder `/var/www/myWebsite/httpdocs`
+    - `define('SS_DATABASE_CHOOSE_NAME', 1);` => will make the database "httpdocs"
+    - `define('SS_DATABASE_CHOOSE_NAME', 2);` => will make the database "myWebsite"
+    - `define('SS_DATABASE_CHOOSE_NAME', 3);` => will make the database "www"
 
 `$_FILE_TO_URL_MAPPING` is used to tell SilverStripe which folder has which URL when using the SilverStripe commandline tool "sake"
 
