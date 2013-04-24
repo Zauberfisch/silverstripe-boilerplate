@@ -14,6 +14,13 @@ class Page extends SiteTree {
 		$fields = parent::getCMSFields();
 		return $fields;
 	}
+
+	public function getSettingsFields() {
+		$fields = parent::getSettingsFields();
+		// Hide ShowInSearch checkbox if we don't have a search
+		$fields->removeByName('ShowInSearch');
+		return $fields;
+	}
 }
 
 class Page_Controller extends ContentController {
