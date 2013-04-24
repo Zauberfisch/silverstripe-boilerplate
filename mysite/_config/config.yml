@@ -20,7 +20,7 @@ SiteTree:
 Email:
   admin_email: 'myEmail@mysite.com'
 #SiteConfig:
-#  Extensions:
+#  extensions:
 #    - 'mysiteSiteConfig'
 #LeftAndMain:
 #  extra_requirements_css:
