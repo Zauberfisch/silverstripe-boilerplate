@@ -1,5 +1,5 @@
 {
-	"name": "silverstripe/installer",
+	"name": "Zauberfisch/silverstripe-boilerplate",
 	"description": "Boilerplate template to quickly kick off a new SilverStripe project",
 	"require": {
 		"php": ">=5.3.2",
