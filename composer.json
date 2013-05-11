@@ -5,12 +5,19 @@
 		"php": ">=5.3.2",
 		"silverstripe/cms": ">=3.1.x-dev,<4.0",
 		"silverstripe/framework": ">=3.1.x-dev,<4.0",
-		"silverstripe/googlesitemaps": "dev-master"
+		"silverstripe/googlesitemaps": "dev-master",
+		"lrc/silverstripe-link-field": "dev-master"
 	},
 	"require-dev": {
 		"silverstripe/docsviewer": "*",
 		"silverstripe/buildtools": "*",
 		"phpunit/phpunit": "3.7.*"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git://github.com/lrc/silverstripe-link-field.git"
+		}
+	],
 	"minimum-stability": "dev"
 }
