@@ -33,7 +33,7 @@ class Page_Controller extends ContentController {
 			THIRDPARTY_DIR . '/jquery/jquery.min.js',
 			// THIRDPARTY_DIR . '/jquery-ui/jquery-ui.min.js',
 			THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
-			PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.pack.js',
+			PROJECT_THIRDPARTY_DIR . '/magnific-popup/jquery.magnific-popup.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/main.js',
 		));
@@ -45,6 +45,7 @@ class Page_Controller extends ContentController {
 		Requirements::combine_files('main.css', array(
 			PROJECT_THIRDPARTY_DIR . '/css/normalize.css',
 			PROJECT_THIRDPARTY_DIR . '/css/h5bp.css',
+			PROJECT_THIRDPARTY_DIR . '/magnific-popup/magnific-popup.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
 			project() . '/css/form.css',
@@ -53,6 +54,5 @@ class Page_Controller extends ContentController {
 			project() . '/css/layout.css',
 			project() . '/css/legacy.css',
 		));
-		Requirements::css(PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.css');
 	}
 }
