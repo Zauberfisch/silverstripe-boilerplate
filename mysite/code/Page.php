@@ -35,6 +35,7 @@ class Page_Controller extends ContentController {
 			THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
 			PROJECT_THIRDPARTY_DIR . '/magnific-popup/jquery.magnific-popup.min.js',
 			project() . '/javascript/plugins.js',
+			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',
 		));
 		// we need to insert modernizr into <head> for html5shiv to work
