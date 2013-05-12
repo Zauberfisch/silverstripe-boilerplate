@@ -19,9 +19,9 @@ SiteTree:
   # create_default_pages: false
 Email:
   admin_email: 'myEmail@mysite.com'
-#SiteConfig:
-#  extensions:
-#    - 'mysiteSiteConfig'
+SiteConfig:
+  extensions:
+    - 'mysiteSiteConfigExtension'
 #LeftAndMain:
 #  extra_requirements_css:
 #    - 'mysite/css/cms.css'
