@@ -2,7 +2,7 @@
 
 .gt-ie8 * {
 	// dissable filter on all elements in IE9 and above,
-	// to avoid double gradients when using the rgba-background and simple-gradient mixins
+	// to avoid double gradients when using the rgba-background and simple-gradient mixins and double shadows
 	filter: none !important;
 }
 

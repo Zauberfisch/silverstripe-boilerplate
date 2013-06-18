@@ -17,14 +17,14 @@
 	color: #fff;
 }
 
-body {
-	color: #333;
-	font-size: 62.5%;
-	font-family: Verdana, Lucida, sans-serif;
-}
-
 html {
 	background: #E5DFE1;
+}
+
+body {
+	color: $text-color;
+	font-size: 62.5%;
+	font-family: $font-family;
 }
 
 table {

@@ -18,14 +18,14 @@
   color: #fff; }
 
 /* line 20, ../scss/screen.scss */
-body {
-  color: #333;
-  font-size: 62.5%;
-  font-family: Verdana, Lucida, sans-serif; }
-
-/* line 26, ../scss/screen.scss */
 html {
   background: #E5DFE1; }
+
+/* line 24, ../scss/screen.scss */
+body {
+  color: #333333;
+  font-size: 62.5%;
+  font-family: Helvetic, Arial, sans-serif; }
 
 /* line 30, ../scss/screen.scss */
 table {

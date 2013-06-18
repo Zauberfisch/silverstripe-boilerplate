@@ -1,12 +1,12 @@
 @import "config";
 
 .typography {
+	font-size: 12px;
+
 	// * PARAGRAPHS
 	// -------------------------------------------- */
 	p {
-		color: #666;
 		line-height: 18px;
-		font-size: 11px;
 		margin: 0 0 18px 0;
 	}
 
@@ -28,55 +28,12 @@
 
 	// * LINKS
 	// -------------------------------------------- */
-
 	a {
 		text-decoration: none;
-		color: #3E91C4;
+		color: $link-color;
 
 		&:hover {
 			text-decoration: underline;
-		}
-
-		// * LINK ICONS - shows type of file
-		// ------------------------------------ */
-		&[href$=".pdf"],
-		&[href$=".PDF"],
-		&.pdf {
-			padding: 2px;
-			padding-left: 20px;
-			background: image-url("icons/page_white_acrobat.png") no-repeat left center;
-		}
-		&[href$=".doc"],
-		&[href$=".DOC"],
-		&.doc {
-			padding: 2px;
-			padding-left: 20px;
-			background: image-url("icons/page_word.png") no-repeat left center;
-		}
-		&[href$=".xls"],
-		&[href$=".XLS"],
-		&.xls {
-			padding: 2px;
-			padding-left: 20px;
-			background: image-url("icons/page_excel.png") no-repeat left center;
-		}
-		&[href$=".gz"],
-		&[href$=".GZ"],
-		&[href$=".gzip"],
-		&[href$=".GZIP"],
-		&[href$=".zip"],
-		&[href$=".ZIP"],
-		&.archive {
-			padding: 2px;
-			padding-left: 20px;
-			background: image-url("icons/page_white_zip.png") no-repeat left center;
-		}
-		&[href$=".exe"],
-		&[href$=".EXE"],
-		&.application {
-			padding: 2px;
-			padding-left: 20px;
-			background: image-url("icons/application.png") no-repeat left center;
 		}
 	}
 
@@ -85,11 +42,9 @@
 	ul,
 	ol {
 		margin: 0 0 18px 24px;
-		color: #666;
 
 		li {
 			margin: 5px 10px;
-			font-size: 11px;
 		}
 		li li {
 			font-size: 10px;
@@ -98,46 +53,29 @@
 
 	// * HEADER STYLES
 	// -------------------------------------------- */
-
-	h1,
-	h2 {
-		color: #4EA3D7;
+	h1, h2, h3, h4, h5, h6 {
 		margin: 0 0 18px 0;
 		font-weight: 300;
 	}
-
 	h1 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 	h2 {
-		font-size: 20px;
+		font-size: 26px;
 	}
 	h3 {
-		color: #222;
-		margin: 0 0 18px 0;
-		font-weight: 300;
-		clear: both;
-		font-size: 18px;
+		font-size: 22px;
 	}
 	h4 {
-		font-size: 16px;
-		color: #222;
-		width: 95%;
-		font-weight: 300;
-		line-height: 18px;
-		border-bottom: 1px solid #ccc;
+		font-size: 20px;
 		margin: 0 0 16px 0;
 	}
 	h5 {
-		font-size: 14px;
-		color: #222;
-		font-weight: 700;
+		font-size: 18px;
 		margin: 0 0 12px 0;
 	}
 	h6 {
-		font-size: 13px;
-		color: #555;
-		line-height: 1.4em;
+		font-size: 16px;
 		margin: 0 0 12px 0;
 	}
 
@@ -157,9 +95,8 @@
 	// -------------------------------------------- */
 	table {
 		margin: 0 0 18px 0;
-		font-size: 11px;
-		color: #666;
 		border-collapse: collapse;
+
 		td {
 			border: 1px solid #999;
 			padding: 5px;
@@ -182,6 +119,7 @@
 	// -------------------------------------------- */
 	img {
 		border: none;
+		max-width: 100%;
 
 		&.right {
 			float: right;
