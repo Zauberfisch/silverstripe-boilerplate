@@ -25,9 +25,6 @@ if (!Director::isLive()) {
 	// turn on errors
 	ini_set('display_errors', 1);
 	error_reporting(E_ALL);
-	// flush templates every reload, this may make your site slow,
-	// and might cause "filetime" errors, which appear when the template gets flushed twice in the same moment
-	SSViewer::flush_template_cache();
 } else {
 	// we are in live mode, send errors per email
 	SS_Log::add_writer(new SS_LogEmailWriter('myEmail@mysite.com'), SS_Log::ERR);
