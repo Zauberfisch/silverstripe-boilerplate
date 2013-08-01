@@ -10,6 +10,11 @@
 	Deny from all
 </Files>
 
+<Files README.md>
+	Order deny,allow
+	Deny from all
+</Files>
+
 # This denies access to all yml files, since developers might include sensitive
 # information in them. See the docs for work-arounds to serve some yaml files
 <Files *.yml>
