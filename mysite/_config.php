@@ -23,15 +23,12 @@ define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
 $logFile = (defined('SS_LOG_PATH') ? SS_LOG_PATH : '..') . '/error.log';
 SS_Log::add_writer(new SS_LogFileWriter($logFile), SS_Log::ERR);
 if (!Director::isLive()) {
-	// turn on errors
-	ini_set('display_errors', 1);
-	error_reporting(E_ALL);
+	// set settings that should only be in dev and test
+	// IMPORTANT: as of 3.1 you can *NOT* set display_errors inside _config.php
+	// use the php ini, htaccess or _ss_environment.php to set display_errors
 } else {
 	// we are in live mode, send errors per email
 	SS_Log::add_writer(new SS_LogEmailWriter('myEmail@mysite.com'), SS_Log::ERR);
-	// turn of error reporting
-	ini_set('display_errors', 0);
-	error_reporting(0);
 }
 
 // CMSMenu::remove_menu_item('SecurityAdmin');
