@@ -38,6 +38,12 @@ the file should look like this (more infos at http://doc.silverstripe.org/sapphi
     global $_FILE_TO_URL_MAPPING;
     $_FILE_TO_URL_MAPPING['/var/www/'] = 'http://127.0.0.1';
     
+    if (defined('SS_ENVIRONMENT_TYPE') && SS_ENVIRONMENT_TYPE != 'live') {
+        // turn on display_errors if we are in dev
+        // NOTE: no need for setting error_reporting, this is done by SilverStripe
+        ini_set('display_errors', 1);
+	}
+    
 there are 2 ways of setting a database name:    
 
 - you can set the database name via `SS_DATABASE_NAME` ( **recommended for live environement** )
