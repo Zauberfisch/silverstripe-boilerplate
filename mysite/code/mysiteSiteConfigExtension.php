@@ -10,7 +10,7 @@ class mysiteSiteConfigExtension extends DataExtension {
 	private static $searchable_fields = array();
 	private static $summary_fields = array();
 
-	public function updateCMSFields($fields) {
+	public function updateCMSFields(FieldList $fields) {
 		$fields->removeByName('Theme');
 		return $fields;
 	}
