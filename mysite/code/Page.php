@@ -44,8 +44,8 @@ class Page_Controller extends ContentController {
 			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
 		));
 		Requirements::combine_files('main.css', array(
-			PROJECT_THIRDPARTY_DIR . '/css/normalize.css',
-			PROJECT_THIRDPARTY_DIR . '/css/h5bp.css',
+			PROJECT_THIRDPARTY_DIR . '/h5bp/normalize.css',
+			PROJECT_THIRDPARTY_DIR . '/h5bp/h5bp.css',
 			PROJECT_THIRDPARTY_DIR . '/magnific-popup/magnific-popup.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
