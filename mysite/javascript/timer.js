@@ -11,6 +11,7 @@ function Timer(callback, delay, interval) {
 	this.stop = function () {
 		window.clearTimeout(timerId)
 		remaining -= new Date() - startDate
+		return this
 	}
 	this.start = function () {
 		window.clearTimeout(timerId)
@@ -22,10 +23,12 @@ function Timer(callback, delay, interval) {
 				that.start()
 			}
 		}, remaining)
+		return this
 	}
 	this.reset = function () {
 		remaining = delay
 		this.start()
+		return this
 	}
 	this.start()
 }
