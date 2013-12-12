@@ -80,7 +80,7 @@ Which has the benefit of having the whole project at one place, not separated in
 ### SASS / SCSS
 
 This boilerplate is prepared for being used with sass (http://sass-lang.com/) and compass (http://compass-style.org/)
-Once you have installed compass (see http://compass-style.org/install/) run the following command in your project root folder:
+Once you have installed compass (see http://compass-style.org/install/) run the following command in your mysite folder:
 
     compass watch .
  
