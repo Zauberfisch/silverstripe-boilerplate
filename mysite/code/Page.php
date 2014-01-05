@@ -33,8 +33,9 @@ class Page_Controller extends ContentController {
 			THIRDPARTY_DIR . '/jquery/jquery.min.js',
 			// THIRDPARTY_DIR . '/jquery-ui/jquery-ui.min.js',
 			THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
-			PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.pack.js',
+			PROJECT_THIRDPARTY_DIR . '/magnific-popup/jquery.magnific-popup.min.js',
 			project() . '/javascript/plugins.js',
+			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',
 		));
 		// we need to insert modernizr into <head> for html5shiv to work
@@ -43,8 +44,9 @@ class Page_Controller extends ContentController {
 			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
 		));
 		Requirements::combine_files('main.css', array(
-			PROJECT_THIRDPARTY_DIR . '/css/normalize.css',
-			PROJECT_THIRDPARTY_DIR . '/css/h5bp.css',
+			PROJECT_THIRDPARTY_DIR . '/h5bp/normalize.css',
+			PROJECT_THIRDPARTY_DIR . '/h5bp/h5bp.css',
+			PROJECT_THIRDPARTY_DIR . '/magnific-popup/magnific-popup.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
 			project() . '/css/form.css',
@@ -53,6 +55,5 @@ class Page_Controller extends ContentController {
 			project() . '/css/layout.css',
 			project() . '/css/legacy.css',
 		));
-		Requirements::css(PROJECT_THIRDPARTY_DIR . '/fancybox/jquery.fancybox-1.3.4.css');
 	}
 }

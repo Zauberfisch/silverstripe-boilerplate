@@ -16,7 +16,7 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "git://github.com/lrc/silverstripe-link-field.git"
+			"url": "git@github.com:Zauberfisch/silverstripe-link-field.git"
 		}
 	],
 	"minimum-stability": "dev"

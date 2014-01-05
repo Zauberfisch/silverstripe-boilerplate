@@ -1,30 +1,26 @@
 @import "config";
 
-* {
+*, *:before, *:after {
 	margin: 0;
 	padding: 0;
+	// box-sizing is supported in Firefox, Chrome, IE8+, Opera, Safari 5.1+
+	// http://html5please.com/#box-sizing
 	@include box-sizing(border-box);
-	*behavior: url(/mysite/polyfill/box-sizing/boxsizing.htc);
 }
 
-::-moz-selection {
+@include selection {
 	background: #000;
 	color: #fff;
-}
-
-::selection {
-	background: #000;
-	color: #fff;
-}
-
-body {
-	color: #333;
-	font-size: 62.5%;
-	font-family: Verdana, Lucida, sans-serif;
 }
 
 html {
 	background: #E5DFE1;
+}
+
+body {
+	color: $text-color;
+	font-size: $font-size;
+	font-family: $font-family;
 }
 
 table {

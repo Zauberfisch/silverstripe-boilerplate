@@ -1,42 +1,41 @@
 /* line 3, ../scss/screen.scss */
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  *behavior: url(/mysite/polyfill/box-sizing/boxsizing.htc); }
+  box-sizing: border-box; }
 
-/* line 10, ../scss/screen.scss */
+/* line 5, ../scss/includes/_mixins.scss */
 ::-moz-selection {
   background: #000;
   color: #fff; }
 
-/* line 15, ../scss/screen.scss */
+/* line 6, ../scss/includes/_mixins.scss */
 ::selection {
   background: #000;
   color: #fff; }
 
-/* line 20, ../scss/screen.scss */
-body {
-  color: #333;
-  font-size: 62.5%;
-  font-family: Verdana, Lucida, sans-serif; }
-
-/* line 26, ../scss/screen.scss */
+/* line 16, ../scss/screen.scss */
 html {
   background: #E5DFE1; }
 
-/* line 30, ../scss/screen.scss */
+/* line 20, ../scss/screen.scss */
+body {
+  color: #333333;
+  font-size: 13px;
+  font-family: Helvetic, Arial, sans-serif; }
+
+/* line 26, ../scss/screen.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 35, ../scss/screen.scss */
+/* line 31, ../scss/screen.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal; }
 
-/* line 40, ../scss/screen.scss */
+/* line 36, ../scss/screen.scss */
 .clear {
   clear: both; }

@@ -1,5 +1,11 @@
 @import "compass";
 
+// mixin for cross browser ::selection styling
+@mixin selection {
+	::-moz-selection { @content; }
+	::selection { @content; }
+}
+
 // easily create a linear gradient without worrying about different prefixes of IE fallback
 // NOTE: the IE fallback also applies to modern IE, so make sure you set "filter: none !important;" on IE > 8
 // @example: @include simple-gradient(#000, #FFF); // normal gradient
@@ -22,17 +28,32 @@
 	background: $rgba;
 }
 
+// overwrite the compass mixin to include the the IE polyfill
+@mixin background-size($size-1: $default-background-size, $size-2: false, $size-3: false, $size-4: false, $size-5: false, $size-6: false, $size-7: false, $size-8: false, $size-9: false, $size-10: false) {
+	$size-1: if(type-of($size-1) == string, unquote($size-1), $size-1);
+	$sizes: compact($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9, $size-10);
+	@include experimental(background-size, $sizes, -moz, -webkit, -o, not -ms, not -khtml);
+	-ms-behavior: url(/mysite/polyfill/background-size/backgroundsize.min.htc);
+}
+
 // set a given image as background with background-size: cover; including IE filter fallback
 // @uses image-url()
-// @example: @include background-image-scaled('bg.jpg');
+// @uses overloaded background-size()
+// @deprecated this mixin will be removed in future versions
 @mixin background-image-scaled($image) {
 	background: image-url($image) no-repeat center center;
 	@include background-size(cover);
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'image-url($image, true)', sizingMethod = 'scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image-url($image, true)', sizingMethod='scale')";
 }
 
 // make it easy to include a font via font-face
+// @example:
+//    // requires this files to exist:
+//    // fonts/myFontName/myFontName.ttf
+//    // fonts/myFontName/myFontName.eot
+//    // fonts/myFontName/myFontName.woff
+//    // fonts/myFontName/myFontName.otf
+//    // fonts/myFontName/myFontName.svg
+//    @include custom-font('myFontName');
 // @example:
 //    // requires this files to exist:
 //    // fonts/folder/myFontFile.ttf
@@ -61,7 +82,7 @@
 //    @include custom-font('myFontName', 'folder/myFontFile', ('', 'light', 'bold'));
 @mixin custom-font($name, $fileName: false, $weightList: false) {
 	@if ($fileName == false) {
-		$fileName: $name;
+		$fileName: "#{$name}/#{$name}";
 	}
 	@if ($weightList == false) {
 		$weightList: '';
