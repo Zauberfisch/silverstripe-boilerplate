@@ -1,5 +1,11 @@
 @import "compass";
 
+// mixin for cross browser ::selection styling
+@mixin selection {
+	::-moz-selection { @content; }
+	::selection { @content; }
+}
+
 // easily create a linear gradient without worrying about different prefixes of IE fallback
 // NOTE: the IE fallback also applies to modern IE, so make sure you set "filter: none !important;" on IE > 8
 // @example: @include simple-gradient(#000, #FFF); // normal gradient

@@ -8,8 +8,13 @@
 
 .lt-ie9 {
 	// IE 8 and lower
+
 	.lt-ie8 {
 		// IE 7 and lower
+
+		// IE 6 & 7 polyfill for box-sizing
+		// behavior: url(/mysite/polyfill/box-sizing/boxsizing.htc);
+
 		.lt-ie7 {
 			// IE 6 and lower
 		}

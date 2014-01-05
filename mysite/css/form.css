@@ -1,7 +1,5 @@
 /* line 3, ../scss/form.scss */
 form {
-  /* FIELDSETS
-  ---------------------------------------- */
   /* FIELD FORMATING
   ---------------------------------------- */
   /* SELECT DROPDOWN
@@ -12,26 +10,23 @@ form {
   ---------------------------------------- */
   /* MESSAGEBOXS
   --------------------------------------------- */ }
-/* line 6, ../scss/form.scss */
-form fieldset {
-  border: 0; }
-/* line 10, ../scss/form.scss */
+/* line 4, ../scss/form.scss */
 form input.action, form input.text, form textarea, form select {
   font-family: Helvetic, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   color: #333333;
   padding: 2px;
   /* INPUT BOXS
   ---------------------------------------- */
   /* ACTION BUTTONS
   ---------------------------------------- */ }
-/* line 22, ../scss/form.scss */
+/* line 16, ../scss/form.scss */
 form input.action.action, form input.text.action, form textarea.action, form select.action {
   cursor: pointer; }
-/* line 29, ../scss/form.scss */
+/* line 23, ../scss/form.scss */
 form ul {
   list-style: none; }
-/* line 32, ../scss/form.scss */
+/* line 26, ../scss/form.scss */
 form .middleColumn {
   display: block;
   margin: 0 10px 10px 0;
@@ -39,42 +34,42 @@ form .middleColumn {
   padding: 4px;
   width: 306px;
   clear: left; }
-/* line 40, ../scss/form.scss */
+/* line 34, ../scss/form.scss */
 form .middleColumn .middleColumn {
   margin-left: 0;
   margin-right: 0;
   padding: 0; }
-/* line 45, ../scss/form.scss */
+/* line 39, ../scss/form.scss */
 form .middleColumn .message {
   margin: 0; }
-/* line 52, ../scss/form.scss */
+/* line 46, ../scss/form.scss */
 form select {
   width: auto; }
-/* line 58, ../scss/form.scss */
+/* line 52, ../scss/form.scss */
 form .typography label {
   display: block;
   margin: 10px 0 5px 0;
   color: #777;
-  font-size: 12px; }
-/* line 64, ../scss/form.scss */
+  font-size: 13px; }
+/* line 58, ../scss/form.scss */
 form label.right {
   display: inline; }
-/* line 70, ../scss/form.scss */
+/* line 64, ../scss/form.scss */
 form ul.optionset {
   margin: 0;
   overflow: hidden; }
-/* line 74, ../scss/form.scss */
+/* line 68, ../scss/form.scss */
 form ul.optionset li {
   margin: 6px 0;
   clear: both; }
-/* line 78, ../scss/form.scss */
+/* line 72, ../scss/form.scss */
 form ul.optionset li input {
   float: left;
   margin: 0 6px; }
-/* line 82, ../scss/form.scss */
+/* line 76, ../scss/form.scss */
 form ul.optionset li label {
   margin: 0; }
-/* line 90, ../scss/form.scss */
+/* line 84, ../scss/form.scss */
 form .message {
   margin: 15px;
   padding: 5px;
@@ -82,10 +77,10 @@ form .message {
   color: #979908;
   border: 4px solid #F7F8B4;
   background: #FFFFEA; }
-/* line 98, ../scss/form.scss */
+/* line 92, ../scss/form.scss */
 form span.middleColumn .message {
   margin: 4px 0 0 3px; }
-/* line 101, ../scss/form.scss */
+/* line 95, ../scss/form.scss */
 form .required {
   margin: 4px 0 0 3px;
   padding: 5px;
