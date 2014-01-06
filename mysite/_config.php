@@ -20,8 +20,7 @@ define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
 
 // always log errors
-$logFile = (defined('SS_LOG_PATH') ? SS_LOG_PATH : '..') . '/error.log';
-SS_Log::add_writer(new SS_LogFileWriter($logFile), SS_Log::ERR);
+SS_Log::add_writer(new SS_LogFileWriter('../silverstripe.log'), SS_Log::ERR);
 if (!Director::isLive()) {
 	// set settings that should only be in dev and test
 	// IMPORTANT: as of 3.1 you can *NOT* set display_errors inside _config.php
