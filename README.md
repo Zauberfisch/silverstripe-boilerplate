@@ -31,6 +31,7 @@ the file should look like this (more infos at http://doc.silverstripe.org/sapphi
     define('SS_DATABASE_CHOOSE_NAME', 2);
     
     define('SS_ENVIRONMENT_TYPE', 'dev');
+    define('SS_ERROR_LOG', '/silverstripe.log');
     
     define('SS_DEFAULT_ADMIN_USERNAME', 'YOUR_EMAIL');
     define('SS_DEFAULT_ADMIN_PASSWORD', 'YOUR_PASSWORD');
