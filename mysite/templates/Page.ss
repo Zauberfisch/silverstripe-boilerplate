@@ -10,8 +10,7 @@
 <!--[if !IE]><!-->
 <html class="no-js no-ie" lang="$ContentLocale"> <!--<![endif]-->
 <head>
-    <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title
-		<% if $SiteConfig.Tagline %> | $SiteConfig.Tagline<% end_if %></title>
+    <title>$Title &raquo; $SiteConfig.Title <% if $SiteConfig.Tagline %> | $SiteConfig.Tagline<% end_if %></title>
 	<% base_tag %>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width"/>
