@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	// box-sizing is supported in Firefox, Chrome, IE8+, Opera, Safari 5.1+
+	// if you need IE6-7 support, enable the polyfill in legacy.scss
 	// http://html5please.com/#box-sizing
 	@include box-sizing(border-box);
 }

@@ -16,26 +16,26 @@
   background: #000;
   color: #fff; }
 
-/* line 16, ../scss/screen.scss */
+/* line 17, ../scss/screen.scss */
 html {
   background: #E5DFE1; }
 
-/* line 20, ../scss/screen.scss */
+/* line 21, ../scss/screen.scss */
 body {
   color: #333333;
   font-size: 13px;
   font-family: Helvetic, Arial, sans-serif; }
 
-/* line 26, ../scss/screen.scss */
+/* line 27, ../scss/screen.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 31, ../scss/screen.scss */
+/* line 32, ../scss/screen.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal; }
 
-/* line 36, ../scss/screen.scss */
+/* line 37, ../scss/screen.scss */
 .clear {
   clear: both; }

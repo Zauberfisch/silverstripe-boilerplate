@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="/favicon.ico"/>
 </head>
 <body>
-<div class="container">
+<div class="page-container">
 	<% include Header %>
     <div class="layout" role="main">
 		$Layout
