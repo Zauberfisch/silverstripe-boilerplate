@@ -1,41 +1,41 @@
-/* line 3, ../scss/screen.scss */
 *, *:before, *:after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-/* line 5, ../scss/includes/_mixins.scss */
 ::-moz-selection {
   background: #000;
-  color: #fff; }
+  color: #fff;
+}
 
-/* line 6, ../scss/includes/_mixins.scss */
 ::selection {
   background: #000;
-  color: #fff; }
+  color: #fff;
+}
 
-/* line 17, ../scss/screen.scss */
 html {
-  background: #E5DFE1; }
+  background: #E5DFE1;
+}
 
-/* line 21, ../scss/screen.scss */
 body {
   color: #333333;
   font-size: 13px;
-  font-family: Helvetic, Arial, sans-serif; }
+  font-family: Helvetic, Arial, sans-serif;
+}
 
-/* line 27, ../scss/screen.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
-/* line 32, ../scss/screen.scss */
 caption, th, td {
   text-align: left;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
-/* line 37, ../scss/screen.scss */
 .clear {
-  clear: both; }
+  clear: both;
+}

@@ -1,65 +1,67 @@
-/* line 3, ../scss/typography.scss */
 .typography {
-  font-size: 13px; }
-/* line 8, ../scss/typography.scss */
+  font-size: 13px;
+}
 .typography p {
   line-height: 18px;
-  margin: 0 0 18px 0; }
-/* line 15, ../scss/typography.scss */
+  margin: 0 0 18px 0;
+}
 .typography blockquote {
   margin: 10px;
   font-size: 1.4em;
   color: #777;
-  font-style: italic; }
-/* line 21, ../scss/typography.scss */
+  font-style: italic;
+}
 .typography q {
   display: block;
   font-size: 0.8em;
   margin: 1em 1em;
   padding: 0.5em;
-  border: 1px #ccc solid; }
-/* line 31, ../scss/typography.scss */
+  border: 1px #ccc solid;
+}
 .typography a {
   text-decoration: none;
-  color: #1122cc; }
-/* line 35, ../scss/typography.scss */
+  color: #1122cc;
+}
 .typography a:hover {
-  text-decoration: underline; }
-/* line 43, ../scss/typography.scss */
-.typography ul, .typography ol {
-  margin: 0 0 18px 24px; }
-/* line 46, ../scss/typography.scss */
-.typography ul li, .typography ol li {
-  margin: 5px 10px; }
-/* line 49, ../scss/typography.scss */
-.typography ul li li, .typography ol li li {
-  font-size: 10px; }
-/* line 56, ../scss/typography.scss */
+  text-decoration: underline;
+}
+.typography ul,
+.typography ol {
+  margin: 0 0 18px 24px;
+}
+.typography ul li,
+.typography ol li {
+  margin: 5px 10px;
+}
+.typography ul li li,
+.typography ol li li {
+  font-size: 10px;
+}
 .typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
   margin: 0 0 18px 0;
-  font-weight: 300; }
-/* line 60, ../scss/typography.scss */
+  font-weight: 300;
+}
 .typography h1 {
-  font-size: 30px; }
-/* line 63, ../scss/typography.scss */
+  font-size: 30px;
+}
 .typography h2 {
-  font-size: 26px; }
-/* line 66, ../scss/typography.scss */
+  font-size: 26px;
+}
 .typography h3 {
-  font-size: 22px; }
-/* line 69, ../scss/typography.scss */
+  font-size: 22px;
+}
 .typography h4 {
   font-size: 20px;
-  margin: 0 0 16px 0; }
-/* line 73, ../scss/typography.scss */
+  margin: 0 0 16px 0;
+}
 .typography h5 {
   font-size: 18px;
-  margin: 0 0 12px 0; }
-/* line 77, ../scss/typography.scss */
+  margin: 0 0 12px 0;
+}
 .typography h6 {
   font-size: 16px;
-  margin: 0 0 12px 0; }
-/* line 84, ../scss/typography.scss */
+  margin: 0 0 12px 0;
+}
 .typography pre {
   font-family: "Courier New", Courier;
   display: block;
@@ -67,47 +69,48 @@
   margin: 2em 5em;
   padding: 0.5em;
   border: 1px #ccc solid;
-  background: #eee; }
-/* line 96, ../scss/typography.scss */
+  background: #eee;
+}
 .typography table {
   margin: 0 0 18px 0;
-  border-collapse: collapse; }
-/* line 100, ../scss/typography.scss */
+  border-collapse: collapse;
+}
 .typography table td {
   border: 1px solid #999;
-  padding: 5px; }
-/* line 108, ../scss/typography.scss */
+  padding: 5px;
+}
 .typography .left {
-  text-align: left; }
-/* line 111, ../scss/typography.scss */
+  text-align: left;
+}
 .typography .center {
-  text-align: center; }
-/* line 114, ../scss/typography.scss */
+  text-align: center;
+}
 .typography .right {
-  text-align: right; }
-/* line 120, ../scss/typography.scss */
+  text-align: right;
+}
 .typography img {
   border: none;
-  max-width: 100%; }
-/* line 124, ../scss/typography.scss */
+  max-width: 100%;
+}
 .typography img.right {
   float: right;
-  margin-left: 20px; }
-/* line 128, ../scss/typography.scss */
+  margin-left: 20px;
+}
 .typography img.left {
   float: left;
-  margin-right: 20px; }
-/* line 132, ../scss/typography.scss */
+  margin-right: 20px;
+}
 .typography img.leftAlone {
   float: left;
-  margin-right: 100%; }
-/* line 136, ../scss/typography.scss */
+  margin-right: 100%;
+}
 .typography img.rightAlone {
   float: right;
-  margin-left: 100%; }
-/* line 140, ../scss/typography.scss */
+  margin-left: 100%;
+}
 .typography img.center {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  display: block; }
+  display: block;
+}
