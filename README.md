@@ -85,7 +85,5 @@ Once you have installed compass (see http://compass-style.org/install/) run the 
 
     compass watch .
  
-which will tell compass to watch for any file changes inside /mysite/scss
-To generate the css for production you can add "-e production" and compass will not include the file comments
-    
-    compass watch -e production .
+which will tell compass to watch for any file changes inside /mysite/scss    
+To generate minified css for production, set the `environment = :production` in [mysite/config.rb](mysite/config.rb).
