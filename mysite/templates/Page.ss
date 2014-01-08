@@ -10,19 +10,19 @@
 <!--[if !IE]><!-->
 <html class="no-js no-ie" lang="$ContentLocale"> <!--<![endif]-->
 <head>
-    <title>$Title &raquo; $SiteConfig.Title <% if $SiteConfig.Tagline %> | $SiteConfig.Tagline<% end_if %></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<title>$Title &raquo; $SiteConfig.Title <% if $SiteConfig.Tagline %> | $SiteConfig.Tagline<% end_if %></title>
 	<% base_tag %>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width"/>
+	<meta name="viewport" content="width=device-width"/>
 	$MetaTags('false')
-    <link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="shortcut icon" href="/favicon.ico"/>
 </head>
 <body>
 <div class="page-container">
 	<% include Header %>
-    <div class="layout" role="main">
+	<div class="layout" role="main">
 		$Layout
-    </div>
+	</div>
 	<% include Footer %>
 </div>
 </body>
