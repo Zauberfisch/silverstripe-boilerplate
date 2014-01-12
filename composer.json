@@ -6,7 +6,8 @@
 		"silverstripe/cms": ">=3.1.x-dev,<4.0",
 		"silverstripe/framework": ">=3.1.x-dev,<4.0",
 		"silverstripe/googlesitemaps": "dev-master",
-		"lrc/silverstripe-link-field": "dev-master"
+		"lrc/silverstripe-link-field": "dev-master",
+		"silverstripe/userforms": "dev-master"
 	},
 	"require-dev": {
 		"silverstripe/docsviewer": "*",
@@ -14,6 +15,10 @@
 		"phpunit/phpunit": "3.7.*"
 	},
 	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:Zauberfisch/silverstripe-userforms.git"
+		},
 		{
 			"type": "vcs",
 			"url": "git@github.com:Zauberfisch/silverstripe-link-field.git"
