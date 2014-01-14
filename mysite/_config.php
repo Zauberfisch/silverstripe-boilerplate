@@ -14,7 +14,7 @@ $databaseConfig['database'] = str_replace('SS_', '', $databaseConfig['database']
 i18n::set_locale('en_US');
 
 // Force redirect to www
-Director::forceWWW();
+//Director::forceWWW();
 
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
