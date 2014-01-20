@@ -15,7 +15,7 @@ As of SilverStripe 3.1 this boilerplate requieres [composer](http://getcomposer.
     cd myNewProject/
     composer update
 
-# configuration (with _ss_environment.php)
+# configuration (with `_ss_environment.php`)
 
 create a file named `_ss_environment.php`, you can place that inside the repo, parent folder or in the parent parent folder.  
 the file should look like this (more infos at http://doc.silverstripe.org/sapphire/en/topics/environment-management)
