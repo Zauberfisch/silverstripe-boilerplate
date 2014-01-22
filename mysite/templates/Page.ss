@@ -11,7 +11,12 @@
 	<% base_tag %>
 	<meta name="viewport" content="width=device-width"/>
 	$MetaTags('false')
-	<link rel="shortcut icon" href="/favicon.ico"/>
+	<%-- favicon.ico should contain size 16,24,32,48 and 64px, see https://github.com/audreyr/favicon-cheat-sheet/ --%>
+	<%-- online converter tool from png to ico with multiple sizes: http://converticon.com/ --%>
+	<link rel="shortcut icon" href="{$BaseURL}favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="{$BaseURL}favicon-152.png">
+	<meta name="msapplication-TileImage" content="{$BaseURL}favicon-144.png">
+	<meta name="msapplication-TileColor" content="#132136">
 </head>
 <body>
 <div class="page-container">
