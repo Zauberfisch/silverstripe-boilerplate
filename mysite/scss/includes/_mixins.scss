@@ -13,7 +13,9 @@
 // @example: @include simple-gradient(#000, #FFF, vertical, false); // no SVG fallback for IE9
 @mixin simple-gradient($start-color, $end-color, $orientation: vertical, $svg-fallback: true) {
 	background-color: $start-color;
-	@include filter-gradient($start-color, $end-color, $orientation);
+	.lt-ie9 & {
+		@include filter-gradient($start-color, $end-color, $orientation);
+	}
 	$orientation: if($orientation == vertical, top, left);
 	$experimental-support-for-svg: $svg-fallback;
 	@include background-image(linear-gradient(top, $start-color 0%, $end-color 100%));
@@ -24,7 +26,9 @@
 // @example: @include rgba-background(#000, 0.5);
 @mixin rgba-background($color, $opacity) {
 	$rgba: rgba($color, $opacity);
-	@include filter-gradient($rgba, $rgba, "vertical");
+	.lt-ie9 & {
+		@include filter-gradient($rgba, $rgba, "vertical");
+	}
 	background: $rgba;
 }
 
@@ -33,7 +37,11 @@
 	$size-1: if(type-of($size-1) == string, unquote($size-1), $size-1);
 	$sizes: compact($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9, $size-10);
 	@include experimental(background-size, $sizes, -moz, -webkit, -o, not -ms, not -khtml);
-	-ms-behavior: url(/mysite/polyfill/background-size/backgroundsize.min.htc);
+	.lt-ie9 & {
+		// http://html5please.com/#background-image
+		// http://caniuse.com/#search=background-image
+		-ms-behavior: url(/mysite/polyfill/background-size/backgroundsize.min.htc);
+	}
 }
 
 // set a given image as background with background-size: cover; including IE filter fallback
