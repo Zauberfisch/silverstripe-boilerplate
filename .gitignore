@@ -8,7 +8,6 @@ _ss_environment.php
 /.idea
 .DS_Store
 /vendor/
-/composer.lock
 /*.iml
 /framework
 /cms
