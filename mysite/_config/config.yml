@@ -7,7 +7,9 @@ After: 'framework/*','cms/*'
 SSViewer:
   # display template filenames as comments in the html output
   source_file_comments: true
-  # Set a theme
+  # This boilerplace suggests using only the mysite folder without a theme
+  # if you want to set a theme, change the 2 lines below
+  theme_enabled: false
   # theme: 'simple'
 MySQLDatabase:
   connection_charset: 'utf8'
