@@ -1,29 +1,53 @@
 *, *:before, *:after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+html {
+  background: #E5DFE1;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #333333;
+  font-family: Helvetic, Arial, sans-serif;
 }
 
 ::-moz-selection {
   background: #000;
   color: #fff;
+  text-shadow: none;
 }
 
 ::selection {
   background: #000;
   color: #fff;
+  text-shadow: none;
 }
 
-html {
-  background: #E5DFE1;
+/**
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
-body {
-  color: #333333;
-  font-size: 13px;
-  font-family: Helvetic, Arial, sans-serif;
+/**
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
 }
 
 table {

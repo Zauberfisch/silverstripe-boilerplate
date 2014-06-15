@@ -10,9 +10,12 @@ form {
   /* MESSAGEBOXS
   --------------------------------------------- */
 }
+form fieldset {
+  border: 0;
+}
 form input.action, form input.text, form textarea, form select {
   font-family: Helvetic, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   color: #333333;
   padding: 2px;
   /* INPUT BOXS
@@ -23,21 +26,18 @@ form input.action, form input.text, form textarea, form select {
 form input.action.action, form input.text.action, form textarea.action, form select.action {
   cursor: pointer;
 }
+form textarea {
+  resize: vertical;
+}
 form ul {
   list-style: none;
 }
 form .middleColumn {
   display: block;
   margin: 0 10px 10px 0;
-  background: #E9E9E9;
-  padding: 4px;
-  width: 306px;
-  clear: left;
 }
 form .middleColumn .middleColumn {
-  margin-left: 0;
   margin-right: 0;
-  padding: 0;
 }
 form .middleColumn .message {
   margin: 0;
@@ -48,8 +48,8 @@ form select {
 form .typography label {
   display: block;
   margin: 10px 0 5px 0;
-  color: #777;
-  font-size: 13px;
+  color: #333333;
+  font-size: 16px;
 }
 form label.right {
   display: inline;

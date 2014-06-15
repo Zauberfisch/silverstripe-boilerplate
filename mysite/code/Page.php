@@ -57,7 +57,6 @@ class Page_Controller extends ContentController {
 		//));
 		Requirements::combine_files('main.css', array(
 			PROJECT_THIRDPARTY_DIR . '/normalize-css/normalize.css',
-			PROJECT_THIRDPARTY_DIR . '/h5bp/h5bp.css',
 			PROJECT_THIRDPARTY_DIR . '/magnific-popup/magnific-popup.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
@@ -67,5 +66,6 @@ class Page_Controller extends ContentController {
 			project() . '/css/layout.css',
 			project() . '/css/legacy.css',
 		));
+		Requirements::css(project() . '/css/print.css', 'print');
 	}
 }

@@ -1,6 +1,9 @@
 @import "config";
 
 form {
+	fieldset {
+		border: 0;
+	}
 	input.action, input.text, textarea, select {
 		font-family: $font-family;
 		font-size: $font-size;
@@ -17,6 +20,9 @@ form {
 			cursor: pointer;
 		}
 	}
+	textarea {
+		resize: vertical;
+	}
 
 	/* FIELD FORMATING
 	---------------------------------------- */
@@ -26,15 +32,9 @@ form {
 	.middleColumn {
 		display: block;
 		margin: 0 10px 10px 0;
-		background: #E9E9E9;
-		padding: 4px;
-		width: 306px;
-		clear: left;
 
 		.middleColumn {
-			margin-left: 0;
 			margin-right: 0;
-			padding: 0;
 		}
 		.message {
 			margin: 0;
@@ -52,7 +52,7 @@ form {
 	.typography label {
 		display: block;
 		margin: 10px 0 5px 0;
-		color: #777;
+		color: $text-color;
 		font-size: $font-size;
 	}
 	label.right {
