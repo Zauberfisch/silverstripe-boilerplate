@@ -10,58 +10,58 @@
 			'timeStamp', 'trace', 'warn'
 		],
 		length = methods.length,
-		console = (window.console = window.console || {})
+		console = (window.console = window.console || {});
 	while (length--) {
-		method = methods[length]
+		method = methods[length];
 		// Only stub undefined methods.
 		if (!console[method]) {
-			console[method] = noop
+			console[method] = noop;
 		}
 	}
 }());
 (function ($) {
-	// pollyfill for placeholder atribute on form inputs
-	var usePollyfill = !('placeholder' in (document.createElement('input')))
+	// pollyfill for placeholder attribute on form inputs
+	var usePollyfill = !('placeholder' in (document.createElement('input')));
 	$('form').entwine({
 		onsubmit: function (e) {
-			this.find('[placeholder]').hidePlaceholder()
-			this._super(e)
+			this.find('[placeholder]').hidePlaceholder();
+			this._super(e);
 		}
-	})
+	});
 	$('input, textarea').entwine({
 		onmatch: function () {
 			if (usePollyfill && this.attr('placeholder')) {
-				this.addClass('placeholder-fallback')
+				this.addClass('placeholder-fallback');
 			}
-			this._super()
+			this._super();
 		}
-	})
+	});
 	$('.placeholder-fallback').entwine({
 		onmatch: function () {
-			this.showPlaceholder()
-			this._super()
+			this.showPlaceholder();
+			this._super();
 		},
 		onclick: function () {
-			this.hidePlaceholder()
-			this._super()
+			this.hidePlaceholder();
+			this._super();
 		},
 		onfocusin: function () {
-			this.hidePlaceholder()
-			this._super()
+			this.hidePlaceholder();
+			this._super();
 		},
 		onfocusout: function () {
-			this.showPlaceholder()
-			this._super()
+			this.showPlaceholder();
+			this._super();
 		},
 		showPlaceholder: function () {
 			if (this.val() == '' || this.val() == this.attr('placeholder')) {
-				this.addClass('placeholder').val(this.attr('placeholder'))
+				this.addClass('placeholder').val(this.attr('placeholder'));
 			}
 		},
 		hidePlaceholder: function () {
 			if (this.val() == this.attr('placeholder')) {
-				this.val('').removeClass('placeholder')
+				this.val('').removeClass('placeholder');
 			}
 		}
-	})
+	});
 }(jQuery));

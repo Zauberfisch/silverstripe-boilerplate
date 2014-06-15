@@ -7,28 +7,28 @@
  * @param boolean interval
  */
 function Timer(callback, delay, interval) {
-	var timerId, startDate, remaining = delay, that = this
+	var timerId, startDate, remaining = delay, that = this;
 	this.stop = function () {
-		window.clearTimeout(timerId)
-		remaining -= new Date() - startDate
-		return this
-	}
+		window.clearTimeout(timerId);
+		remaining -= new Date() - startDate;
+		return this;
+	};
 	this.start = function () {
-		window.clearTimeout(timerId)
-		startDate = new Date()
-		if (remaining > delay) remaining = delay
+		window.clearTimeout(timerId);
+		startDate = new Date();
+		if (remaining > delay) remaining = delay;
 		timerId = window.setTimeout(function () {
-			callback()
+			callback();
 			if (typeof interval != 'undefined' && interval === true) {
-				that.start()
+				that.start();
 			}
-		}, remaining)
+		}, remaining);
 		return this
-	}
+	};
 	this.reset = function () {
-		remaining = delay
-		this.start()
-		return this
-	}
-	this.start()
+		remaining = delay;
+		this.start();
+		return this;
+	};
+	this.start();
 }
