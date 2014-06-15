@@ -30,7 +30,3 @@ if (!Director::isLive()) {
 	// we are in live mode, send errors per email
 	SS_Log::add_writer(new SS_LogEmailWriter('myEmail@mysite.com'), SS_Log::ERR);
 }
-
-// CMSMenu::remove_menu_item('SecurityAdmin');
-// CMSMenu::remove_menu_item('CMSSettingsController');
-// CMSMenu::remove_menu_item('Help'); // still not possible ?
