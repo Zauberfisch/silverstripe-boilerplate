@@ -1,0 +1,107 @@
+// switch to disable rem support
+// if set to false, all public rem mixis will return px values instead
+// $rem-$rem-enabled is set in _config.scss, if you are using this
+// script without the _config.scss file, use the line below:
+// $rem-enabled: true;
+
+// base value used for rem calculation
+// $rem-base is set in _config.scss, if you are using this
+// script without the _config.scss file, use the line below:
+// $rem-base: 16px !default;
+
+// mixin that deals with rem for you
+// outputs a px and a rem version of your css (px for older browsers)
+// works with all values (eg none, 10px auto, ...), rem and px values are detected and converted
+// based on https://tobymackenzie.wordpress.com/2014/04/11/scss-rem-fallback-mixin/ by Toby Mackenzie
+//
+// @param string property (eg margin, background, 'font-size')
+// @param string|list values (eg 1px, 1px auto)
+// @example @include rem(margin, 10px auto);
+// @example @include rem(background, url('foo.jpeg') 1em 24px);
+@mixin rem($property, $values, $base-value: $rem-base) {
+	$pxList: ();
+	$remList: ();
+
+	@if $rem-enabled {
+		@each $value in $values {
+			$pxValue: $value;
+			$remValue: $value;
+			@if type-of($value) == 'number' {
+				$unit: unit($value);
+				// px or rem get converted to the other unit
+				@if $unit == 'px' {
+					$remValue: _convert-px-to-rem($value, $base-value);
+				} @else if $unit == 'rem' {
+					$pxValue: _convert-rem-to-px($value, $base-value);
+				}
+			}
+			$pxList: append($pxList, $pxValue);
+			$remList: append($remList, $remValue);
+		}
+		@if $pxList == $remList {
+			#{$property}: $pxList;
+		} @else {
+			#{$property}: $pxList;
+			#{$property}: $remList;
+		}
+	} @else {
+		#{$property}: $values;
+	}
+}
+
+// convert given values from rem to px
+// @example font-size: rem2px(2rem); font-size: 2rem;
+@function rem2px($values, $base-value: $rem-base) {
+	@if not $rem-enabled {
+		@return $values;
+	}
+	$valueList: ();
+	@each $value in $values {
+		@if type-of($value) == 'number' and unit($value) == 'rem' {
+			$value: _convert-rem-to-px($value, $base-value);
+		}
+		$valueList: append($valueList, $value);
+	}
+	@return $valueList;
+}
+
+// convert given values from px to rem
+// @example font-size: 32px; font-size: px2rem(33px);
+@function px2rem($values, $base-value: $rem-base) {
+	@if not $rem-enabled {
+		@return $values;
+	}
+	$valueList: ();
+	@each $value in $values {
+		@if type-of($value) == 'number' and unit($value) == 'px' {
+			$value: _convert-px-to-rem($value, $base-value);
+		}
+		$valueList: append($valueList, $value);
+	}
+	@return $valueList;
+}
+
+// convert single px value to rem
+@function _convert-px-to-rem($value, $base-value: $rem-base) {
+	$value: _strip-unit($value) / _strip-unit($base-value) * 1rem;
+	@if ($value == 0rem) {
+		// Turn 0px into 0
+		$value: 0;
+	}
+	@return $value;
+}
+
+// convert single rem value to px
+@function _convert-rem-to-px($value, $base-value: $rem-base) {
+	$value: _strip-unit($value) * _strip-unit($base-value) * 1px;
+	@if ($value == 0px) {
+		// Turn 0px into 0
+		$value: 0;
+	}
+	@return $value;
+}
+
+// strips the unit of measure and returns it
+@function _strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}

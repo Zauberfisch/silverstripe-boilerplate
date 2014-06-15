@@ -2,19 +2,24 @@
 
 // mixin for cross browser ::selection styling
 @mixin selection {
-	::-moz-selection { @content; }
-	::selection { @content; }
+	::-moz-selection {
+		@content;
+	}
+	::selection {
+		@content;
+	}
 }
 
 // easily create a linear gradient without worrying about different prefixes of IE fallback
-// NOTE: the IE fallback also applies to modern IE, so make sure you set "filter: none !important;" on IE > 8
 // @example: @include simple-gradient(#000, #FFF); // normal gradient
 // @example: @include simple-gradient(#000, #FFF, horizontal); // horizontal gradient
 // @example: @include simple-gradient(#000, #FFF, vertical, false); // no SVG fallback for IE9
 @mixin simple-gradient($start-color, $end-color, $orientation: vertical, $svg-fallback: true) {
 	background-color: $start-color;
-	.lt-ie9 & {
-		@include filter-gradient($start-color, $end-color, $orientation);
+	@if $ie-8-support {
+		.lt-ie9 & {
+			@include filter-gradient($start-color, $end-color, $orientation);
+		}
 	}
 	$orientation: if($orientation == vertical, top, left);
 	$experimental-support-for-svg: $svg-fallback;
@@ -26,8 +31,10 @@
 // @example: @include rgba-background(#000, 0.5);
 @mixin rgba-background($color, $opacity) {
 	$rgba: rgba($color, $opacity);
-	.lt-ie9 & {
-		@include filter-gradient($rgba, $rgba, "vertical");
+	@if $ie-8-support {
+		.lt-ie9 & {
+			@include filter-gradient($rgba, $rgba, "vertical");
+		}
 	}
 	background: $rgba;
 }
@@ -37,20 +44,13 @@
 	$size-1: if(type-of($size-1) == string, unquote($size-1), $size-1);
 	$sizes: compact($size-1, $size-2, $size-3, $size-4, $size-5, $size-6, $size-7, $size-8, $size-9, $size-10);
 	@include experimental(background-size, $sizes, -moz, -webkit, -o, not -ms, not -khtml);
-	.lt-ie9 & {
-		// http://html5please.com/#background-image
-		// http://caniuse.com/#search=background-image
-		-ms-behavior: url(/mysite/polyfill/background-size/backgroundsize.min.htc);
+	@if $ie-8-support {
+		.lt-ie9 & {
+			// http://html5please.com/#background-image
+			// http://caniuse.com/#search=background-image
+			-ms-behavior: url(/mysite/polyfill/background-size/backgroundsize.min.htc);
+		}
 	}
-}
-
-// set a given image as background with background-size: cover; including IE filter fallback
-// @uses image-url()
-// @uses overloaded background-size()
-// @deprecated this mixin will be removed in future versions
-@mixin background-image-scaled($image) {
-	background: image-url($image) no-repeat center center;
-	@include background-size(cover);
 }
 
 // make it easy to include a font via font-face
@@ -109,36 +109,4 @@
 			src: font-url($ie) unquote("format('eot')"), font-files("#{$file}.ttf", truetype, "#{$file}.woff", woff, "#{$file}.otf", opentype, "#{$file}.svg", svg);
 		}
 	}
-}
-
-$rem-base: 16px !default;
-// REM CALC
-// Taken form zurb foundation5
-// Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
-// @example:
-//     @include rem-calc(10 20 30px 40);
-// @example:
-//     // Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
-//     @include rem-calc((10, 20, 30, 40px));
-// @example:
-//     // Optionally call with a different base (eg: 8px) to calculate rem.
-//     @include rem-calc(16px 32px 48px, 8px);
-// @example:
-//     // If you require to comma separate your list
-//     @include rem-calc((16px, 32px, 48), 8px);
-@function rem-calc($values, $base-value: $rem-base) {
-	$max: length($values);
-	@if $max == 1 {
-		@return convert-to-rem(nth($values, 1), $base-value);
-	}
-	$remValues: ();
-	@for $i from 1 through $max {
-		$remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
-	}
-	@return $remValues;
-}
-@function convert-to-rem($value, $base-value: $rem-base) {
-	$value: strip-unit($value) / strip-unit($base-value) * 1rem;
-	@if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
-	@return $value;
 }

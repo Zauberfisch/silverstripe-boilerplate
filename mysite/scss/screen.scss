@@ -8,9 +8,9 @@
 }
 
 html {
-	background: #E5DFE1;
-	// font-size: 1em;
+	// font-size has to be set to the body for the rem mixins to be accurate
 	font-size: $rem-base;
+	background: #E5DFE1;
 	line-height: 1.4;
 	color: $text-color;
 	font-family: $font-family;

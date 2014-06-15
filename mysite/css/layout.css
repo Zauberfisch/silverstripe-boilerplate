@@ -6,7 +6,3 @@
   background: rgba(255, 255, 255, 0.5);
   padding: 20px;
 }
-.lt-ie9 .page-container .layout {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80FFFFFF', endColorstr='#80FFFFFF');
-}

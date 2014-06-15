@@ -2,10 +2,14 @@
 
 @import "compass";
 @import "includes/mixins";
+@import "includes/rem";
 @import "includes/media-queries";
 
 $text-color: #333 !default;
 $link-color: #1122CC !default;
 $font-family: Helvetic, Arial, sans-serif !default;
 $font-size: 16px !default;
-$rem-base: $font-size;
+$rem-base: $font-size !default;
+
+$rem-enabled: true !default;
+$ie-8-support: false !default;
