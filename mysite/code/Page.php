@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Default Page Type
+ */
 class Page extends SiteTree {
 	private static $db = array();
 	private static $has_one = array();
@@ -23,6 +26,11 @@ class Page extends SiteTree {
 	}
 }
 
+/**
+ * Class Page_Controller
+ * @property Page dataRecord
+ * @method Page data
+ */
 class Page_Controller extends ContentController {
 	private static $allowed_actions = array();
 

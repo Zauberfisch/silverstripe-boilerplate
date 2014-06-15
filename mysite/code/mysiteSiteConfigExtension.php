@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Extension to modify SiteConfig
+ * @property SiteConfig owner
+ */
 class mysiteSiteConfigExtension extends DataExtension {
 	private static $db = array();
 	private static $has_one = array();
