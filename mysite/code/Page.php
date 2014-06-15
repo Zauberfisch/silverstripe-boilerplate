@@ -56,7 +56,7 @@ class Page_Controller extends ContentController {
 		//	'UA-XXXXX-X'
 		//));
 		Requirements::combine_files('main.css', array(
-			PROJECT_THIRDPARTY_DIR . '/h5bp/normalize.css',
+			PROJECT_THIRDPARTY_DIR . '/normalize-css/normalize.css',
 			PROJECT_THIRDPARTY_DIR . '/h5bp/h5bp.css',
 			PROJECT_THIRDPARTY_DIR . '/magnific-popup/magnific-popup.css',
 			project() . '/css/screen.css',
