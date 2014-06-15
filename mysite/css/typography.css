@@ -1,12 +1,16 @@
 .typography {
   font-size: 16px;
+  font-size: 1rem;
 }
 .typography p {
   line-height: 18px;
-  margin: 0 0 18px 0;
+  line-height: 1.125rem;
+  margin: 0 0 18px;
+  margin: 0 0 1.125rem;
 }
 .typography blockquote {
   margin: 10px;
+  margin: 0.625rem;
   font-size: 1.4em;
   color: #777;
   font-style: italic;
@@ -16,7 +20,8 @@
   font-size: 0.8em;
   margin: 1em 1em;
   padding: 0.5em;
-  border: 1px #ccc solid;
+  border: 1px #cccccc solid;
+  border: 0.0625rem #cccccc solid;
 }
 .typography a {
   text-decoration: none;
@@ -28,39 +33,54 @@
 .typography ul,
 .typography ol {
   margin: 0 0 18px 24px;
+  margin: 0 0 1.125rem 1.5rem;
 }
 .typography ul li,
 .typography ol li {
   margin: 5px 10px;
+  margin: 0.3125rem 0.625rem;
 }
 .typography ul li li,
 .typography ol li li {
   font-size: 10px;
+  font-size: 0.625rem;
 }
 .typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
-  margin: 0 0 18px 0;
+  margin: 0 0 18px;
+  margin: 0 0 1.125rem;
   font-weight: 300;
 }
+.typography h4 {
+  margin: 0 0 16px;
+  margin: 0 0 1rem;
+}
+.typography h5, .typography h6 {
+  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
+}
 .typography h1 {
-  font-size: 30px;
+  font-size: 32px;
+  font-size: 2rem;
 }
 .typography h2 {
-  font-size: 26px;
+  font-size: 28px;
+  font-size: 1.75rem;
 }
 .typography h3 {
-  font-size: 22px;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 .typography h4 {
-  font-size: 20px;
-  margin: 0 0 16px 0;
+  font-size: 22px;
+  font-size: 1.375rem;
 }
 .typography h5 {
-  font-size: 18px;
-  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 .typography h6 {
-  font-size: 16px;
-  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 .typography pre {
   font-family: "Courier New", Courier;
@@ -68,16 +88,20 @@
   font-size: 1.2em;
   margin: 2em 5em;
   padding: 0.5em;
-  border: 1px #ccc solid;
+  border: 1px #cccccc solid;
+  border: 0.0625rem #cccccc solid;
   background: #eee;
 }
 .typography table {
-  margin: 0 0 18px 0;
+  margin: 0 0 18px;
+  margin: 0 0 1.125rem;
   border-collapse: collapse;
 }
 .typography table td {
-  border: 1px solid #999;
+  border: 1px #999999 solid;
+  border: 0.0625rem #999999 solid;
   padding: 5px;
+  padding: 0.3125rem;
 }
 .typography .left {
   text-align: left;
@@ -94,11 +118,13 @@
 }
 .typography img.right {
   float: right;
-  margin-left: 20px;
+  margin-left: 18px;
+  margin-left: 1.125rem;
 }
 .typography img.left {
   float: left;
-  margin-right: 20px;
+  margin-right: 18px;
+  margin-right: 1.125rem;
 }
 .typography img.leftAlone {
   float: left;

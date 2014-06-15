@@ -1,19 +1,19 @@
 @import "config";
 
 .typography {
-	font-size: $font-size;
+	@include rem(font-size, $font-size);
 
 	// * PARAGRAPHS
 	// -------------------------------------------- */
 	p {
-		line-height: 18px;
-		margin: 0 0 18px 0;
+		@include rem(line-height, 18px);
+		@include rem(margin, 0 0 18px);
 	}
 
 	// * QUOTES
 	// -------------------------------------------- */
 	blockquote {
-		margin: 10px;
+		@include rem(margin, 10px);
 		font-size: 1.4em;
 		color: #777;
 		font-style: italic;
@@ -23,7 +23,7 @@
 		font-size: 0.8em;
 		margin: 1em 1em;
 		padding: 0.5em;
-		border: 1px #ccc solid;
+		@include rem(border, 1px #ccc solid);
 	}
 
 	// * LINKS
@@ -41,42 +41,33 @@
 	// -------------------------------------------- */
 	ul,
 	ol {
-		margin: 0 0 18px 24px;
+		@include rem(margin, 0 0 18px 24px);
 
 		li {
-			margin: 5px 10px;
+			@include rem(margin, 5px 10px);
 		}
 		li li {
-			font-size: 10px;
+			@include rem(font-size, 10px);
 		}
 	}
 
 	// * HEADER STYLES
 	// -------------------------------------------- */
 	h1, h2, h3, h4, h5, h6 {
-		margin: 0 0 18px 0;
+		@include rem(margin, 0 0 18px);
 		font-weight: 300;
 	}
-	h1 {
-		font-size: 30px;
-	}
-	h2 {
-		font-size: 26px;
-	}
-	h3 {
-		font-size: 22px;
-	}
 	h4 {
-		font-size: 20px;
-		margin: 0 0 16px 0;
+		@include rem(margin, 0 0 16px);
 	}
-	h5 {
-		font-size: 18px;
-		margin: 0 0 12px 0;
+	h5, h6 {
+		@include rem(margin, 0 0 12px);
 	}
-	h6 {
-		font-size: 16px;
-		margin: 0 0 12px 0;
+	$headlines: (32px, 28px, 24px, 22px, 20px, 18px);
+	@for $i from 1 through length($headlines) {
+		h#{$i} {
+			@include rem(font-size, nth($headlines, $i));
+		}
 	}
 
 	// * PRE STYLES
@@ -87,19 +78,19 @@
 		font-size: 1.2em;
 		margin: 2em 5em;
 		padding: 0.5em;
-		border: 1px #ccc solid;
-		background: #eee;;
+		@include rem(border, 1px #ccc solid);
+		background: #eee;
 	}
 
 	// * TABLE STYLING
 	// -------------------------------------------- */
 	table {
-		margin: 0 0 18px 0;
+		@include rem(margin, 0 0 18px);
 		border-collapse: collapse;
 
 		td {
-			border: 1px solid #999;
-			padding: 5px;
+			@include rem(border, 1px #999 solid);
+			@include rem(padding, 5px);
 		}
 	}
 
@@ -123,11 +114,11 @@
 
 		&.right {
 			float: right;
-			margin-left: 20px;
+			@include rem(margin-left, 18px);
 		}
 		&.left {
 			float: left;
-			margin-right: 20px;
+			@include rem(margin-right, 18px);
 		}
 		&.leftAlone {
 			float: left;

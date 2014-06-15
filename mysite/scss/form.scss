@@ -6,7 +6,7 @@ form {
 	}
 	input.action, input.text, textarea, select {
 		font-family: $font-family;
-		font-size: $font-size;
+		@include rem(font-size, $font-size);
 		color: $text-color;
 		padding: 2px;
 
@@ -31,7 +31,7 @@ form {
 	}
 	.middleColumn {
 		display: block;
-		margin: 0 10px 10px 0;
+		@include rem(margin, 0 10px 10px 0);
 
 		.middleColumn {
 			margin-right: 0;
@@ -51,9 +51,9 @@ form {
 	---------------------------------------- */
 	.typography label {
 		display: block;
-		margin: 10px 0 5px 0;
+		@include rem(margin, 10px 0 5px);
 		color: $text-color;
-		font-size: $font-size;
+		@include rem(font-size, $font-size);
 	}
 	label.right {
 		display: inline;
@@ -66,12 +66,12 @@ form {
 		overflow: hidden;
 
 		li {
-			margin: 6px 0;
+			@include rem(margin, 6px 0);
 			clear: both;
 
 			input {
 				float: left;
-				margin: 0 6px;
+				@include rem(margin, 0 6px);
 			}
 			label {
 				margin: 0;
@@ -81,23 +81,23 @@ form {
 
 	/* MESSAGEBOXS
 	--------------------------------------------- */
+	.message, .required {
+		display: block;
+		@include rem(padding, 5px);
+		@include rem(border, 4px solid);
+	}
+	.middleColumn .message, .required {
+		@include rem(margin, 4px 0 0 3px);
+	}
 	.message {
-		margin: 15px;
-		padding: 5px;
-		width: 92%;
+		@include rem(margin, 15px);
 		color: #979908;
-		border: 4px solid #F7F8B4;
+		border-color: #F7F8B4;
 		background: #FFFFEA;
 	}
-	span.middleColumn .message {
-		margin: 4px 0 0 3px;
-	}
 	.required {
-		margin: 4px 0 0 3px;
-		padding: 5px;
-		width: 92%;
 		color: #DC1313;
-		border: 4px solid #FF7373;
+		border-color: #FF7373;
 		background: #FED0D0;
 	}
 }

@@ -31,10 +31,13 @@ html {
  */
 hr {
   display: block;
-  height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
+  height: 1px;
+  height: 0.0625rem;
+  border-top: 1px solid #cccccc;
+  border-top: 0.0625rem solid #cccccc;
+  margin: 0 0 18px;
+  margin: 0 0 1.125rem;
   padding: 0;
 }
 
