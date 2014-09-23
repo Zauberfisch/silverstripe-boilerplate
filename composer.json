@@ -13,11 +13,5 @@
 		"silverstripe/buildtools": "*",
 		"phpunit/phpunit": "3.7.*"
 	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "git@github.com:Zauberfisch/silverstripe-link-field.git"
-		}
-	],
 	"minimum-stability": "dev"
 }
