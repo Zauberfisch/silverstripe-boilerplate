@@ -6,7 +6,7 @@ namespace mysite;
  * Extension to modify SiteConfig
  * @property \SiteConfig owner
  */
-class mysiteSiteConfigExtension extends \DataExtension {
+class SiteConfigExtension extends \DataExtension {
 	private static $db = [];
 	private static $has_one = [];
 	private static $belongs_to = [];

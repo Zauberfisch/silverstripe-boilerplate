@@ -23,9 +23,9 @@ Email:
   admin_email: 'myEmail@mysite.com'
 SiteConfig:
   extensions:
-    - 'mysite\mysiteSiteConfigExtension'
+    - 'mysite\SiteConfigExtension'
 LeftAndMain:
   extensions:
-    - 'mysite\mysiteLeftAndMainExtension'
+    - 'mysite\LeftAndMainExtension'
 #  extra_requirements_css:
 #    - 'mysite/css/cms.css'
