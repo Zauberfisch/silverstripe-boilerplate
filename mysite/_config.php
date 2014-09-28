@@ -19,6 +19,10 @@ i18n::set_locale('en_US');
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
 
+# workaround because there are some hardcoded references to Page in SilverStripe
+class_alias('mysite\Page', 'Page');
+class_alias('mysite\Page_Controller', 'Page_Controller');
+
 // it is suggested to set SS_ERROR_LOG in _ss_environment.php to enable logging,
 // alternatively you can use the line below for your custom logging settings
 // SS_Log::add_writer(new SS_LogFileWriter('../silverstripe-errors.log'), SS_Log::ERR);
