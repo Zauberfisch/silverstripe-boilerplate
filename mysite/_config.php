@@ -20,8 +20,8 @@ define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
 
 # workaround because there are some hardcoded references to Page in SilverStripe
-class_alias('mysite\Page', 'Page');
-class_alias('mysite\Page_Controller', 'Page_Controller');
+//class_alias('mysite\Page', 'Page');
+//class_alias('mysite\Page_Controller', 'Page_Controller');
 
 // it is suggested to set SS_ERROR_LOG in _ss_environment.php to enable logging,
 // alternatively you can use the line below for your custom logging settings

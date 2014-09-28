@@ -1,6 +1,8 @@
 <?php
 
-namespace mysite;
+// class Page can not be namespaced for the time being.
+// some hardcoded references to 'Page' (silently) break /dev/dev if a namespace + class alias is used
+//namespace mysite;
 
 /**
  */
