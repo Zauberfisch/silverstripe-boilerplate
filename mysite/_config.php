@@ -17,7 +17,10 @@ i18n::set_locale('en_US');
 //Director::forceWWW();
 
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
-define('PROJECT_THIRDPARTY_PATH', project() . '/' . PROJECT_THIRDPARTY_DIR);
+define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
+
+define('PROJECT_BOWER_DIR', PROJECT_THIRDPARTY_DIR . '/bower');
+define('PROJECT_BOWER_PATH', BASE_PATH . '/' . PROJECT_BOWER_DIR);
 
 # workaround because there are some hardcoded references to Page in SilverStripe
 //class_alias('mysite\Page', 'Page');

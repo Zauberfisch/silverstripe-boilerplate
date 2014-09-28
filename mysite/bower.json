@@ -1,0 +1,64 @@
+{
+	"name": "mysite",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"compass-breakpoint": "2.x",
+		"jquery": "1.x",
+		"magnific-popup": "0.x",
+		"normalize-css": "3.0.x",
+		"susy": "2.x",
+	    "entwine": "https://github.com/hafriedlander/jquery.entwine.git"
+	},
+	"install": {
+		"path": "thirdparty/bower",
+		"sources": {
+			"compass-breakpoint": [
+				"bower_components/compass-breakpoint/stylesheets/**",
+				"bower_components/compass-breakpoint/.bower.json",
+				"bower_components/compass-breakpoint/bower.json",
+				"bower_components/compass-breakpoint/README.markdown"
+			],
+			"sassy-maps": [
+				"bower_components/sassy-maps/sass/sassy-maps/**",
+				"bower_components/sassy-maps/.bower.json",
+				"bower_components/sassy-maps/bower.json",
+				"bower_components/sassy-maps/README.md"
+			],
+			"jquery": [
+				"bower_components/jquery/dist/**",
+				"bower_components/jquery/.bower.json",
+				"bower_components/jquery/bower.json",
+				"bower_components/jquery/MIT-LICENSE.txt"
+			],
+			"entwine": [
+				"bower_components/entwine/dist/**",
+				"bower_components/entwine/.bower.json",
+				"bower_components/entwine/bower.json",
+				"bower_components/entwine/README.textile",
+				"bower_components/entwine/LICENSE"
+			],
+			"magnific-popup": [
+				"bower_components/magnific-popup/dist/**",
+				"bower_components/magnific-popup/.bower.json",
+				"bower_components/magnific-popup/bower.json",
+				"bower_components/magnific-popup/README.md"
+			],
+			"normalize-css": [
+				"bower_components/normalize-css/**"
+			],
+			"susy": [
+				"bower_components/susy/sass/**",
+				"bower_components/susy/.bower.json",
+				"bower_components/susy/bower.json",
+				"bower_components/susy/LICENSE.txt",
+				"bower_components/susy/README.md"
+			]
+		}
+	}
+}

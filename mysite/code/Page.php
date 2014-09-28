@@ -51,10 +51,9 @@ class Page_Controller extends \ContentController {
 		parent::init();
 		\Requirements::set_combined_files_folder(project() . '/_combinedfiles');
 		\Requirements::combine_files('main.js', [
-			THIRDPARTY_DIR . '/jquery/jquery.min.js',
-			// THIRDPARTY_DIR . '/jquery-ui/jquery-ui.min.js',
-			THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js',
-			PROJECT_THIRDPARTY_DIR . '/magnific-popup/jquery.magnific-popup.min.js',
+			PROJECT_BOWER_DIR . '/jquery/jquery.min.js',
+			PROJECT_BOWER_DIR . '/entwine/jquery.entwine-dist.js',
+			PROJECT_BOWER_DIR . '/magnific-popup/jquery.magnific-popup.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',
@@ -77,8 +76,8 @@ class Page_Controller extends \ContentController {
 		//	'UA-XXXXX-X'
 		//));
 		\Requirements::combine_files('main.css', [
-			PROJECT_THIRDPARTY_DIR . '/normalize-css/normalize.css',
-			PROJECT_THIRDPARTY_DIR . '/magnific-popup/magnific-popup.css',
+			PROJECT_BOWER_DIR . '/normalize-css/normalize.css',
+			PROJECT_BOWER_DIR . '/magnific-popup/magnific-popup.css',
 			project() . '/css/screen.css',
 			project() . '/css/typography.css',
 			project() . '/css/form.css',

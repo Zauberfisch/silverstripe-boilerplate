@@ -1,0 +1,13 @@
+{
+  "name": "entwine",
+  "homepage": "https://github.com/hafriedlander/jquery.entwine",
+  "_release": "0e475ced9e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0e475ced9ef10e1f854bcd70ac157a489236105d"
+  },
+  "_source": "https://github.com/hafriedlander/jquery.entwine.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/hafriedlander/jquery.entwine.git"
+}

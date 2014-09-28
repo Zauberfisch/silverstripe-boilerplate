@@ -3,7 +3,11 @@
 @import "compass";
 @import "includes/mixins";
 @import "includes/rem";
-@import "includes/media-queries";
+@import "../thirdparty/bower/sassy-maps/sass/map-get";
+@import "../thirdparty/bower/sassy-maps/sass/map-set";
+@import "../thirdparty/bower/sassy-maps/sass/map-to-string";
+@import "../thirdparty/bower/compass-breakpoint/breakpoint";
+@import "../thirdparty/bower/susy/susy";
 
 $text-color: #333 !default;
 $link-color: #1122CC !default;
