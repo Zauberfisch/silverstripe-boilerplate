@@ -9,8 +9,6 @@
 		"lrc/silverstripe-link-field": "*"
 	},
 	"require-dev": {
-		"silverstripe/docsviewer": "*",
-		"silverstripe/buildtools": "*",
 		"phpunit/phpunit": "3.7.*"
 	},
 	"minimum-stability": "dev"
