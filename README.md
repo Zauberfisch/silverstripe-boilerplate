@@ -36,6 +36,8 @@ the file should look like this (more infos at http://doc.silverstripe.org/sapphi
     define('SS_DEFAULT_ADMIN_USERNAME', 'YOUR_EMAIL');
     define('SS_DEFAULT_ADMIN_PASSWORD', 'YOUR_PASSWORD');
     
+    ini_set('display_errors', 1);
+    
     global $_FILE_TO_URL_MAPPING;
     $_FILE_TO_URL_MAPPING['/var/www/'] = 'http://127.0.0.1';
     
