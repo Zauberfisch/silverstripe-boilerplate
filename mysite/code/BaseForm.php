@@ -21,8 +21,8 @@ class BaseForm extends \Form {
 		$this->processFields(
 			$fields,
 			$validator,
-			\Config::inst()->get($this->class, 'set_placeholder'),
-			\Config::inst()->get($this->class, 'set_placeholder_required_star')
+			(bool)\Config::inst()->get($this->class, 'set_placeholder'),
+			(bool)\Config::inst()->get($this->class, 'set_placeholder_required_star')
 		);
 		$this->addExtraClass('base-form');
 	}
@@ -37,6 +37,7 @@ class BaseForm extends \Form {
 	protected function processFields(\FieldList $fields, \RequiredFields $r = null, $setPlaceholder = true, $setRequiredPlaceholder = true) {
 		if ($setPlaceholder) {
 			foreach ($fields as $f) {
+				/** @var \FormField|\CompositeField|\ConfirmedPasswordField $f */
 				if ($f->is_a('CompositeField')) {
 					$this->processFields($f->FieldList(), $r, $setPlaceholder, $setRequiredPlaceholder);
 				} elseif ($f->is_a('ConfirmedPasswordField')) {
