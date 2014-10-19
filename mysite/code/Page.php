@@ -99,40 +99,24 @@ class Page_Controller extends \ContentController {
 	 * @return \SSViewer
 	 */
 	public function getViewer($action) {
-		// Add action-specific templates for inheritance chain
-		$templates = [];
-		if ($action && $action != 'index') {
-			$parentClass = $this->class;
-			while ($parentClass != "Controller") {
-				$templates[] = strtok($parentClass, '_') . '_' . $action;
-				$parentClass = get_parent_class($parentClass);
-			}
+		if ($action != 'index') {
+			$templates = array_merge(
+			// Find templates by dataRecord
+				mysite\SSViewer::get_templates_by_class(get_class($this->dataRecord), "_$action", "SiteTree"),
+				// Next, we need to add templates for all controllers
+				mysite\SSViewer::get_templates_by_class(get_class($this), "_$action", "Controller")
+			);
+		} else {
+			$templates = array();
 		}
-		// Add controller templates for inheritance chain
-		$parentClass = $this->class;
-		while ($parentClass != "Controller") {
-			$templates[] = strtok($parentClass, '_');
-			$parentClass = get_parent_class($parentClass);
-		}
-
-		$templates[] = 'Controller';
-
-		// remove duplicates
-		$templates = array_unique($templates);
-		$allTemplates = [];
-		foreach ($templates as $template) {
-			// replace \ with - to avoid having to use \ in filenames, this is the preferred filename
-			$allTemplates[] = str_replace('\\', '-', $template);
-			// for legacy reasons, still include the \ version as \ is a valid filename un *nix systems
-			$allTemplates[] = $template;
-			// add file name without namespace as fallback. eg mynamespace/MyPage becomes MyPage
-			$noNamespace = explode('\\', $template);
-			$noNamespace = $noNamespace[count($noNamespace) - 1];
-			if ($noNamespace && $template != $noNamespace) {
-				$allTemplates[] = $noNamespace;
-			}
-		}
-		$allTemplates = array_reverse(array_unique(array_reverse($allTemplates)));
-		return new \SSViewer($allTemplates);
+		// default template without action / index action
+		$templates = array_merge(
+			$templates,
+			// Find templates by dataRecord
+			mysite\SSViewer::get_templates_by_class(get_class($this->dataRecord), "", "SiteTree"),
+			// Next, we need to add templates for all controllers
+			mysite\SSViewer::get_templates_by_class(get_class($this), "", "Controller")
+		);
+		return new mysite\SSViewer($templates);
 	}
 }
