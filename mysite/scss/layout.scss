@@ -1,12 +1,12 @@
 @import "config";
 
 .page-container {
-	@include rem(width, 999px);
-	@include rem(margin, 2rem auto);
+	width: 999px;
+	margin: 20px auto;
 
 	.layout {
-		@include rgba-background(#FFF, 0.5);
-		@include rem(padding, 20px);
+		background: #FFF;
+		padding: 20px;
 
 		.content {
 		}

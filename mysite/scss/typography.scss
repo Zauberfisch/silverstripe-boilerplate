@@ -1,19 +1,19 @@
 @import "config";
 
 .typography {
-	@include rem(font-size, $font-size);
+	font-size: $font-size;
 
 	// * PARAGRAPHS
 	// -------------------------------------------- */
 	p {
-		@include rem(line-height, 18px);
-		@include rem(margin, 0 0 18px);
+		line-height: 18px;
+		margin: 0 0 18px;
 	}
 
 	// * QUOTES
 	// -------------------------------------------- */
 	blockquote {
-		@include rem(margin, 10px);
+		margin: 10px;
 		font-size: 1.4em;
 		color: #777;
 		font-style: italic;
@@ -23,7 +23,7 @@
 		font-size: 0.8em;
 		margin: 1em 1em;
 		padding: 0.5em;
-		@include rem(border, 1px #ccc solid);
+		border: 1px #ccc solid;
 	}
 
 	// * LINKS
@@ -41,32 +41,32 @@
 	// -------------------------------------------- */
 	ul,
 	ol {
-		@include rem(margin, 0 0 18px 24px);
+		margin: 0 0 18px 24px;
 
 		li {
-			@include rem(margin, 5px 10px);
+			margin: 5px 10px;
 		}
 		li li {
-			@include rem(font-size, 10px);
+			font-size: 10px;
 		}
 	}
 
 	// * HEADER STYLES
 	// -------------------------------------------- */
 	h1, h2, h3, h4, h5, h6 {
-		@include rem(margin, 0 0 18px);
+		margin: 0 0 18px;
 		font-weight: 300;
 	}
 	h4 {
-		@include rem(margin, 0 0 16px);
+		margin: 0 0 16px;
 	}
 	h5, h6 {
-		@include rem(margin, 0 0 12px);
+		margin: 0 0 12px;
 	}
 	$headlines: (32px, 28px, 24px, 22px, 20px, 18px);
 	@for $i from 1 through length($headlines) {
 		h#{$i} {
-			@include rem(font-size, nth($headlines, $i));
+			font-size: nth($headlines, $i);
 		}
 	}
 
@@ -78,19 +78,19 @@
 		font-size: 1.2em;
 		margin: 2em 5em;
 		padding: 0.5em;
-		@include rem(border, 1px #ccc solid);
+		border: 1px #ccc solid;
 		background: #eee;
 	}
 
 	// * TABLE STYLING
 	// -------------------------------------------- */
 	table {
-		@include rem(margin, 0 0 18px);
+		margin: 0 0 18px;
 		border-collapse: collapse;
 
 		td {
-			@include rem(border, 1px #999 solid);
-			@include rem(padding, 5px);
+			border: 1px #999 solid;
+			padding: 5px;
 		}
 	}
 
@@ -114,11 +114,11 @@
 
 		&.right {
 			float: right;
-			@include rem(margin-left, 18px);
+			margin-left: 18px;
 		}
 		&.left {
 			float: left;
-			@include rem(margin-right, 18px);
+			margin-right: 18px;
 		}
 		&.leftAlone {
 			float: left;

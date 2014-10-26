@@ -1,11 +1,8 @@
 .page-container {
   width: 999px;
-  width: 62.4375rem;
-  margin: 32px auto;
-  margin: 2rem auto;
+  margin: 20px auto;
 }
 .page-container .layout {
-  background: rgba(255, 255, 255, 0.5);
+  background: #FFF;
   padding: 20px;
-  padding: 1.25rem;
 }

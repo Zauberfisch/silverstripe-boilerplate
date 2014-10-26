@@ -10,7 +10,7 @@ html {
   font-size: 16px;
   background: #E5DFE1;
   line-height: 1.4;
-  color: #333333;
+  color: #333;
   font-family: Helvetic, Arial, sans-serif;
 }
 
@@ -33,11 +33,8 @@ hr {
   display: block;
   border: 0;
   height: 1px;
-  height: 0.0625rem;
-  border-top: 1px solid #cccccc;
-  border-top: 0.0625rem solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 0 0 18px;
-  margin: 0 0 1.125rem;
   padding: 0;
 }
 
