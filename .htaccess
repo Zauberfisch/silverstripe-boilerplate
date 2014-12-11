@@ -36,6 +36,6 @@ ErrorDocument 500 /assets/error-500.html
 
 	RewriteCond %{REQUEST_URI} ^(.*)$
 	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule .* framework/main.php?url=%1 [QSA]
+	RewriteRule .* index.php?url=%1 [QSA]
 </IfModule>
 ### SILVERSTRIPE END ###
