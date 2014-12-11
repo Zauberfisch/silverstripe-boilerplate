@@ -14,9 +14,9 @@ form fieldset {
   border: 0;
 }
 form input.action, form input.text, form textarea, form select {
-  font-family: Helvetic, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #333;
+  color: #333333;
   padding: 2px;
   /* INPUT BOXS
   ---------------------------------------- */
@@ -48,7 +48,7 @@ form select {
 form .typography label {
   display: block;
   margin: 10px 0 5px;
-  color: #333;
+  color: #333333;
   font-size: 16px;
 }
 form label.right {
