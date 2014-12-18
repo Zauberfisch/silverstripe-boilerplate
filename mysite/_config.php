@@ -22,10 +22,6 @@ define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
 define('PROJECT_BOWER_DIR', PROJECT_THIRDPARTY_DIR . '/bower');
 define('PROJECT_BOWER_PATH', BASE_PATH . '/' . PROJECT_BOWER_DIR);
 
-# workaround because there are some hardcoded references to Page in SilverStripe
-//class_alias('mysite\Page', 'Page');
-//class_alias('mysite\Page_Controller', 'Page_Controller');
-
 // it is suggested to set SS_ERROR_LOG in _ss_environment.php to enable logging,
 // alternatively you can use the line below for your custom logging settings
 // SS_Log::add_writer(new SS_LogFileWriter('../silverstripe-errors.log'), SS_Log::ERR);

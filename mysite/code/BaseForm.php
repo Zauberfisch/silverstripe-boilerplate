@@ -1,7 +1,5 @@
 <?php
 
-namespace mysite;
-
 /**
  * Base Form to provide additional functionality like auto placeholder setting and fieldLabel()
  */

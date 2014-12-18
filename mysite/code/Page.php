@@ -1,9 +1,5 @@
 <?php
 
-// class Page can not be namespaced for the time being.
-// some hardcoded references to 'Page' (silently) break /dev/dev if a namespace + class alias is used
-//namespace mysite;
-
 /**
  */
 class Page extends \SiteTree {
@@ -87,36 +83,5 @@ class Page_Controller extends \ContentController {
 			project() . '/css/legacy.css',
 		]);
 		\Requirements::css(project() . '/css/print.css', 'print');
-	}
-
-	/**
-	 * Overwrite getViewer to provide namespace support for templates
-	 * This means: Class Page in the namespace mysite will try to render with the following templates:
-	 * ['Layout/mysite-Page.ss', 'Layout/Page.ss', 'mysite-Page.ss', 'Page.ss']
-	 * This workaround will be removed once SilverStripe supports templates with namespaces
-	 *
-	 * @param string $action
-	 * @return \SSViewer
-	 */
-	public function getViewer($action) {
-		if ($action != 'index') {
-			$templates = array_merge(
-			// Find templates by dataRecord
-				mysite\SSViewer::get_templates_by_class(get_class($this->dataRecord), "_$action", "SiteTree"),
-				// Next, we need to add templates for all controllers
-				mysite\SSViewer::get_templates_by_class(get_class($this), "_$action", "Controller")
-			);
-		} else {
-			$templates = array();
-		}
-		// default template without action / index action
-		$templates = array_merge(
-			$templates,
-			// Find templates by dataRecord
-			mysite\SSViewer::get_templates_by_class(get_class($this->dataRecord), "", "SiteTree"),
-			// Next, we need to add templates for all controllers
-			mysite\SSViewer::get_templates_by_class(get_class($this), "", "Controller")
-		);
-		return new mysite\SSViewer($templates);
 	}
 }

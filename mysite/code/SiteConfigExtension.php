@@ -1,12 +1,10 @@
 <?php
 
-namespace mysite;
-
 /**
  * Extension to modify SiteConfig
  * @property \SiteConfig owner
  */
-class SiteConfigExtension extends \DataExtension {
+class mysiteSiteConfigExtension extends \DataExtension {
 	private static $db = [];
 	private static $has_one = [];
 	private static $belongs_to = [];
