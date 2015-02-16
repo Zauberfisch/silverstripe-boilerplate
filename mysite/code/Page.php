@@ -14,7 +14,6 @@ class Page extends \SiteTree {
 	private static $summary_fields = [];
 	private static $defaults = [];
 
-
 	/**
 	 * @return \FieldList
 	 */
@@ -25,18 +24,16 @@ class Page extends \SiteTree {
 	}
 
 	/**
-	 * @param bool $includeRelations
-	 * @return array
+	 * @return \FieldList
 	 */
-	public function fieldLabels($includeRelations = true) {
-		$labels = parent::fieldLabels($includeRelations);
-		//$labels['key'] = _t('class.key', 'value'); 
-		return $labels;
+	public function getSettingsFields() {
+		$fields = parent::getSettingsFields();
+		$fields->removeByName('ShowInSearch');
+		return $fields;
 	}
 }
 
 /**
- * @author zauberfisch
  * @property Page dataRecord
  * @method Page data
  */
@@ -44,12 +41,13 @@ class Page_Controller extends \ContentController {
 	private static $allowed_actions = [];
 
 	public function init() {
+		Requirements::set_backend(new BetterRequirements_Backend());
 		parent::init();
 		\Requirements::set_combined_files_folder(project() . '/_combinedfiles');
 		\Requirements::combine_files('main.js', [
-			PROJECT_BOWER_DIR . '/jquery/jquery.min.js',
-			PROJECT_BOWER_DIR . '/entwine/jquery.entwine-dist.js',
-			PROJECT_BOWER_DIR . '/magnific-popup/jquery.magnific-popup.min.js',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/jquery.magnific-popup.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',
@@ -72,16 +70,16 @@ class Page_Controller extends \ContentController {
 		//	'UA-XXXXX-X'
 		//));
 		\Requirements::combine_files('main.css', [
-			PROJECT_BOWER_DIR . '/normalize-css/normalize.css',
-			PROJECT_BOWER_DIR . '/magnific-popup/magnific-popup.css',
-			project() . '/css/screen.css',
-			project() . '/css/typography.css',
-			project() . '/css/form.css',
-			project() . '/css/header.css',
-			project() . '/css/footer.css',
-			project() . '/css/layout.css',
-			project() . '/css/legacy.css',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/normalize-css/normalize.css',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/magnific-popup.css',
+			project() . '/scss/screen.scss',
+			project() . '/scss/typography.scss',
+			project() . '/scss/form.scss',
+			project() . '/scss/header.scss',
+			project() . '/scss/footer.scss',
+			project() . '/scss/layout.scss',
+			project() . '/scss/legacy.scss',
 		]);
-		\Requirements::css(project() . '/css/print.css', 'print');
+		\Requirements::css(project() . '/scss/print.scss', 'print');
 	}
 }

@@ -1,19 +1,65 @@
 // this file should be included into all other files, here you can add variables and mixins
 
-@import "compass";
-@import "includes/mixins";
-@import "includes/rem";
-@import "../thirdparty/bower/sassy-maps/sass/map-get";
-@import "../thirdparty/bower/sassy-maps/sass/map-set";
-@import "../thirdparty/bower/sassy-maps/sass/map-to-string";
-@import "../thirdparty/bower/compass-breakpoint/breakpoint";
-@import "../thirdparty/bower/susy/susy";
+$module: "mysite";
 
-$text-color: #333 !default;
-$link-color: #1122CC !default;
-$font-family: Helvetica, Arial, sans-serif !default;
+@import "../thirdparty/composer-bower/compass-mixins/lib/compass";
+@import "includes/mixins";
+@import "includes/compass-polyfill";
+@import "../thirdparty/composer-bower/sassy-maps/sass/sassy-maps";
+@import "../thirdparty/composer-bower/compass-breakpoint/stylesheets/breakpoint";
+@import "../thirdparty/composer-bower/susy/sass/susy";
+
+
+$text-color: #000 !default;
+$link-color: #222 !default;
+$font-family: Abel, Helvetica, Arial, sans-serif !default;
+$font-family-headlines: Cabin, Helvetica, Arial, sans-serif !default;
 $font-size: 16px !default;
 $rem-base: $font-size !default;
 
 $rem-enabled: true !default;
 $ie-8-support: false !default;
+
+$breakpoint-small: 400px;
+$breakpoint-medium: 600px;
+
+$section-gutter: 80px;
+$container-width: 870px;
+
+@include breakpoint-set('no query fallbacks', true);
+
+$breakpoint-fallback-class: '.no-mediaqueries';
+
+@mixin breakpoint-with-fallback($breakpoint) {
+	@include breakpoint($breakpoint, $breakpoint-fallback-class) {
+		@content;
+	}
+}
+
+$total-columns: 12;
+
+$susy: (
+	math: fluid,
+	output: float,
+	gutter-position: after,
+	container: $container-width,
+	container-position: center,
+	columns: $total-columns,
+	gutters: 4,
+	column-width: false,
+	global-box-sizing: border-box,
+	last-flow: to,
+	//debug: (
+	//		image: show,
+	//		color: rgba(#66f, .25),
+	//		output: overlay,
+	//		toggle: top right,
+	//),
+	use-custom: (
+		background-image: true,
+		background-options: false,
+		box-sizing: true,
+		clearfix: false,
+		rem: true,
+	)
+);

@@ -1,14 +1,28 @@
 @import "config";
 
 .page-container {
-	width: 999px;
-	margin: 20px auto;
+	@include container;
 
 	.layout {
 		background: #FFF;
+		margin: 20px 0;
 		padding: 20px;
+		@include susy-clearfix;
 
-		.content {
-		}
+		//.sidebar {
+		//	margin: 0 0 gutter();
+		//}
+		//.content {
+		//	
+		//}
+		//@include breakpoint($breakpoint-medium) {
+		//	.sidebar {
+		//		@include span(4);
+		//	}
+		//	.content {
+		//		@include span(8 last);
+		//	}
+		//}
+
 	}
 }

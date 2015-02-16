@@ -3,13 +3,45 @@
 	"description": "Boilerplate template to quickly kick off a new SilverStripe project",
 	"require": {
 		"php": ">=5.4",
-		"silverstripe/cms": "3.x@stable",
-		"silverstripe/framework": "3.x@stable",
+		"bower-asset/jquery": "1.*",
+		"bower-asset/normalize-css": "3.0.x",
+		"bower-asset/compass-mixins": "0.x",
+		"bower-asset/compass-breakpoint": "2.x",
+		"bower-asset/susy": "2.x",
+		"bower-asset/magnific-popup": "1.*",
+		"bower-asset/jquery.entwine": "*",
+		"silverstripe/cms": "^3.1@stable",
+		"silverstripe/framework": "^3.1@stable",
 		"silverstripe/googlesitemaps": "*",
-		"lrc/silverstripe-link-field": "*"
+		"lrc/silverstripe-link-field": "*",
+		"zauberfisch/silverstripe-better-requirements": "*",
+		"zauberfisch/silverstripe-better-i18n": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "3.7.*"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:Zauberfisch/silverstripe-better-requirements.git"
+		},
+		{
+			"type": "vcs",
+			"url": "git@github.com:Zauberfisch/silverstripe-better-i18n.git"
+		}
+	],
+	"extra": {
+		"asset-installer-paths": {
+			"npm-asset-library": "mysite/thirdparty/composer-npm",
+			"bower-asset-library": "mysite/thirdparty/composer-bower"
+		},
+		"asset-repositories": [
+			{
+				"type": "bower-vcs",
+				"url": "git@github.com:hafriedlander/jquery.entwine.git",
+				"name": "bower-asset/jquery.entwine"
+			}
+		]
+	}
 }

@@ -1,5 +1,3 @@
-@import "compass";
-
 // mixin for cross browser ::selection styling
 @mixin selection {
 	::-moz-selection {
@@ -51,6 +49,10 @@
 			-ms-behavior: url(/mysite/polyfill/background-size/backgroundsize.min.htc);
 		}
 	}
+}
+
+@function _font-file($file, $format) {
+	@return font-url($file) unquote("format('#{$format}')");
 }
 
 // make it easy to include a font via font-face
@@ -106,7 +108,22 @@
 			$ie: unquote("#{$eot}?iefix");
 			font-family: quote($name);
 			src: font-url($eot);
-			src: font-url($ie) unquote("format('eot')"), font-files("#{$file}.ttf", truetype, "#{$file}.woff", woff, "#{$file}.otf", opentype, "#{$file}.svg", svg);
+			src: _font-file($ie, 'eot'), _font-file("#{$file}.ttf", truetype), _font-file("#{$file}.woff", woff), _font-file("#{$file}.otf", opentype), _font-file("#{$file}.svg", svg);
+			//src: font-url($ie) unquote("format('eot')"), font-files("#{$file}.ttf", truetype, "#{$file}.woff", woff, "#{$file}.otf", opentype, "#{$file}.svg", svg);
 		}
 	}
+}
+
+@mixin button-reset {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+	background: transparent;
+	@include border-radius(0);
+	@include box-shadow(none);
+	@include appearance(none);
+	border: 0;
+	display: block;
+	outline: none;
+	padding: 0;
+	margin: 0;
 }

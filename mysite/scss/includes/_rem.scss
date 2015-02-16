@@ -1,3 +1,5 @@
+$rem-base: 16px !default;
+
 // switch to disable rem support
 // if set to false, all public rem mixis will return px values instead
 // $rem-$rem-enabled is set in _config.scss, if you are using this
@@ -18,7 +20,7 @@
 // @param string|list values (eg 1px, 1px auto)
 // @example @include rem(margin, 10px auto);
 // @example @include rem(background, url('foo.jpeg') 1em 24px);
-@mixin rem($property, $values, $base-value: $rem-base) {
+@mixin rem($property, $values, $base-value: $rem-baswhie) {
 	$pxList: ();
 	$remList: ();
 
