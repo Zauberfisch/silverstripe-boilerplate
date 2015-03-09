@@ -11,16 +11,13 @@ global $databaseConfig;
 $databaseConfig['database'] = str_replace('SS_', '', $databaseConfig['database']);
 
 // set default language
-i18n::set_locale('de_DE');
+i18n::set_locale('en_US');
 
 // Force redirect to www
 //Director::forceWWW();
 
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
-
-define('PROJECT_BOWER_DIR', PROJECT_THIRDPARTY_DIR . '/bower');
-define('PROJECT_BOWER_PATH', BASE_PATH . '/' . PROJECT_BOWER_DIR);
 
 // it is suggested to set SS_ERROR_LOG in _ss_environment.php to enable logging,
 // alternatively you can use the line below for your custom logging settings
