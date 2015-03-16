@@ -1,6 +1,5 @@
 /assets/*
 _ss_environment.php
-/tools/phing-metadata/
 /silverstripe-cache/
 /.buildpath/
 /.project/
@@ -17,7 +16,7 @@ _ss_environment.php
 /reports/
 /googlesitemaps/
 /silverstripe-link-field/
-/better-i18n/
 /better-requirements/
+/better-image/
+/better-i18n/
 .sass-cache
-
