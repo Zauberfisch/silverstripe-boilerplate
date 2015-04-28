@@ -23,24 +23,6 @@
 		"phpunit/phpunit": "3.7.*"
 	},
 	"minimum-stability": "dev",
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "git@github.com:Zauberfisch/silverstripe-better-form-validator.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@github.com:Zauberfisch/silverstripe-better-requirements.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@github.com:Zauberfisch/silverstripe-better-image.git"
-		},
-		{
-			"type": "vcs",
-			"url": "git@github.com:Zauberfisch/silverstripe-better-i18n.git"
-		}
-	],
 	"extra": {
 		"asset-installer-paths": {
 			"npm-asset-library": "mysite/thirdparty/composer-npm",
