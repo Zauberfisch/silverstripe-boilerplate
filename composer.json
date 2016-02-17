@@ -20,7 +20,8 @@
 		"zauberfisch/silverstripe-better-i18n": "*"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "3.7.*"
+		"phpunit/phpunit": "3.7.*",
+		"axyr/silverstripe-ideannotator": "*"
 	},
 	"minimum-stability": "dev",
 	"extra": {

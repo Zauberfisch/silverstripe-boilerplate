@@ -2,7 +2,7 @@
 
 /**
  */
-class Page extends \SiteTree {
+class Page extends SiteTree {
 	private static $db = [];
 	private static $has_one = [];
 	private static $belongs_to = [];
@@ -15,7 +15,7 @@ class Page extends \SiteTree {
 	private static $defaults = [];
 
 	/**
-	 * @return \FieldList
+	 * @return FieldList
 	 */
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -24,7 +24,7 @@ class Page extends \SiteTree {
 	}
 
 	/**
-	 * @return \FieldList
+	 * @return FieldList
 	 */
 	public function getSettingsFields() {
 		$fields = parent::getSettingsFields();
@@ -37,14 +37,14 @@ class Page extends \SiteTree {
  * @property Page dataRecord
  * @method Page data
  */
-class Page_Controller extends \ContentController {
+class Page_Controller extends ContentController {
 	private static $allowed_actions = [];
 
 	public function init() {
 		Requirements::set_backend(new BetterRequirements_Backend());
 		parent::init();
-		\Requirements::set_combined_files_folder(project() . '/_combinedfiles');
-		\Requirements::combine_files('main.js', [
+		Requirements::set_combined_files_folder(project() . '/_combinedfiles');
+		Requirements::combine_files('main.js', [
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/jquery.magnific-popup.min.js',
@@ -53,7 +53,7 @@ class Page_Controller extends \ContentController {
 			project() . '/javascript/main.js',
 		]);
 		// insert modernizr into <head> for html5shiv to work
-		\Requirements::insertHeadTags(sprintf(
+		Requirements::insertHeadTags(sprintf(
 			'<script src="%s"></script>',
 			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
 		));
@@ -69,7 +69,7 @@ class Page_Controller extends \ContentController {
 		//	</script>",
 		//	'UA-XXXXX-X'
 		//));
-		\Requirements::combine_files('main.css', [
+		Requirements::combine_files('main.css', [
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/normalize-css/normalize.css',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/magnific-popup.css',
 			project() . '/scss/screen.scss',
@@ -80,6 +80,8 @@ class Page_Controller extends \ContentController {
 			project() . '/scss/layout.scss',
 			project() . '/scss/legacy.scss',
 		]);
-		\Requirements::css(project() . '/scss/print.scss', 'print');
+		Requirements::css(project() . '/scss/print.scss', 'print');
+		Requirements::css(project() . '/scss/editor.scss');
+		Requirements::clear(project() . '/css/editor.css');
 	}
 }

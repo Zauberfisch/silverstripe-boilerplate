@@ -2,9 +2,11 @@
 
 /**
  * Extension to modify SiteConfig
- * @property \SiteConfig owner
+ * StartGeneratedWithDataObjectAnnotator
+ * @property SiteConfig|mysiteSiteConfigExtension owner
+ * EndGeneratedWithDataObjectAnnotator
  */
-class mysiteSiteConfigExtension extends \DataExtension {
+class mysiteSiteConfigExtension extends DataExtension {
 	private static $db = [];
 	private static $has_one = [];
 	private static $belongs_to = [];
@@ -17,9 +19,9 @@ class mysiteSiteConfigExtension extends \DataExtension {
 	private static $defaults = [];
 
 	/**
-	 * @param \FieldList $fields
+	 * @param FieldList $fields
 	 */
-	public function updateCMSFields(\FieldList $fields) {
+	public function updateCMSFields(FieldList $fields) {
 		$fields->removeByName('Theme');
 	}
 }

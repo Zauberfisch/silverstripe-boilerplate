@@ -6,7 +6,7 @@ After: 'framework/*','cms/*'
 ---
 SSViewer:
   # display template filenames as comments in the html output
-  source_file_comments: true
+  source_file_comments: false
   # This boilerplace suggests using only the mysite folder without a theme
   # if you want to set a theme, change the 2 lines below
   theme_enabled: false
@@ -27,5 +27,14 @@ SiteConfig:
 LeftAndMain:
   extensions:
     - 'mysiteLeftAndMainExtension'
-#  extra_requirements_css:
-#    - 'mysite/css/cms.css'
+---
+Only:
+  environment: 'dev'
+---
+SSViewer:
+  source_file_comments: true
+DataObjectAnnotator:
+  enabled:
+    true
+  enabled_modules:
+    - mysite
